@@ -1,0 +1,26 @@
+@import "../fragment/yo-header";
+#root{
+	width:100%;
+	height:100%;
+}
+
+@font-face{
+	font-family:yofont;
+	src:url(/iconfont/iconfont.woff) format("woff"),
+	url(/iconfont/iconfont.ttf) format("truetype");
+}
+@font-face{
+	font-family:yofont;
+	src:url(/iconfont/iconfont2.woff) format("woff"),
+	url(/iconfont/iconfont2.ttf) format("truetype");
+}
+@font-face{
+	font-family:yofont;
+	src:url(/iconfont/iconfont3.woff) format("woff"),
+	url(/iconfont/iconfont3.ttf) format("truetype");
+}
+@font-face{
+	font-family:yofont;
+	src:url(/iconfont/iconfont5.woff) format("woff"),
+	url(/iconfont/iconfont5.ttf) format("truetype");
+}
