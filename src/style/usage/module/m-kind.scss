@@ -1,0 +1,45 @@
+.m-kind{
+	height:100%;
+	width:100%;
+	padding-top:0.44rem;
+	.kindlist{
+		@include flexbox();
+		@include flex-direction();
+		width:100%;
+		height:400px;
+		background:yellow;
+		ul{
+			width:85px;
+			height:100%;
+			background: pink;
+			li{
+				width:85px;
+				height: 48px;
+				line-height: 48px;
+				text-align: center;
+				a{	
+					height:100%;
+					width:100%;
+					color:#363636;
+					background: #fbfbfb;
+					display: inline-block;
+					border-bottom:1px #ececec solid;
+					border-right:1px #ececec solid;
+				}
+			}
+		}
+		div{
+			height: 300px;
+			width:100%;
+			background: red;
+			ul{
+				width:100%;
+				height:auto;
+				li{
+					width:100%;
+					height:45px;
+				}
+			}
+		}
+	}
+}

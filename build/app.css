@@ -1837,3 +1837,51 @@ body {
   height: 1.87rem;
   margin: 0.2rem 0;
   background: #fff; }
+
+.m-home .u-categery {
+  width: 100%;
+  height: 1.6rem;
+  background: #fff; }
+
+.m-kind {
+  height: 100%;
+  width: 100%;
+  padding-top: 0.44rem; }
+  .m-kind .kindlist {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    height: 400px;
+    background: yellow; }
+    .m-kind .kindlist ul {
+      width: 85px;
+      height: 100%;
+      background: pink; }
+      .m-kind .kindlist ul li {
+        width: 85px;
+        height: 48px;
+        line-height: 48px;
+        text-align: center; }
+        .m-kind .kindlist ul li a {
+          height: 100%;
+          width: 100%;
+          color: #363636;
+          background: #fbfbfb;
+          display: inline-block;
+          border-bottom: 1px #ececec solid;
+          border-right: 1px #ececec solid; }
+    .m-kind .kindlist div {
+      height: 300px;
+      width: 100%;
+      background: red; }
+      .m-kind .kindlist div ul {
+        width: 100%;
+        height: auto; }
+        .m-kind .kindlist div ul li {
+          width: 100%;
+          height: 45px; }

@@ -1,11 +1,13 @@
 import React from 'react';
 import Carousel from '../../component_dev/carousel/src'
+import {Link} from 'react-router'
 
 class Home extends React.Component {
   constructor (props) {
     super(props)
 	this.state={
-		list:[<div/>]
+		list:[<div/>],
+		categery:[<div/>]
 	}
     
   }
@@ -17,6 +19,9 @@ class Home extends React.Component {
 				<Carousel delay={3} dots={false}>
 					{this.state.list} 
 				</Carousel>
+				<div className="u-categery">
+					{this.state.categery}
+				</div>
 			</div>
 		</div>
 	)	
@@ -25,13 +30,24 @@ class Home extends React.Component {
 	  fetch("./data/data.json")
 		.then(response=>response.json())
 		.then(res=>{
-			console.log(res.swiper);
 			var arr=[];
 			for(var k in res.swiper){
 				arr.push(<li className="item"><img className="img" src={res.swiper[k]} /></li>)
 			}
 			this.setState({
 				list:arr
+			})
+		})
+		fetch("./data/data.json")
+		.then(response=>response.json())
+		.then(res=>{
+			console.log(res.kind);
+			var arr2=[];
+			for(var k in res.kind){
+				arr2.push(<Link to="/jiadian"><img className="img" src={res.kind[k]} /></Link>)
+			}
+			this.setState({
+				categery:arr2
 			})
 		})
   }
