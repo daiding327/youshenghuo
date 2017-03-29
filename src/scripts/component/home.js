@@ -9,7 +9,8 @@ class Home extends React.Component {
 		list:[<div/>],
 		categery:[<div/>],
 		baihuo1:[<div/>],
-		baihuo2:[<div/>]
+		baihuo2:[<div/>],
+		tuijian:[<div/>]
 	}
     
   }
@@ -21,19 +22,23 @@ class Home extends React.Component {
 				<Carousel delay={3} dots={false}>
 					{this.state.list} 
 				</Carousel>
-				<div className="u-categery">
-					{this.state.categery}
-				</div>
-				<Link to="/supermarket" className="supermarket">
-					<img src="./images/more.jpg"/>
-				</Link>
-				<div className="baihuo">
-					<img className="bu-top" src="images/1488980649202.jpg"/>
-					{this.state.baihuo1}
-					<img className="bu-bottom" src="images/1488980695836.jpg"/>
-					{this.state.baihuo2}
-					
-				</div>
+				
+			</div>
+			<div className="u-categery">
+				{this.state.categery}
+			</div>
+			<Link to="/supermarket" className="supermarket">
+				<img src="./images/more.jpg"/>
+			</Link>
+			<div className="baihuo">
+				<img className="bu-top" src="images/1488980649202.jpg"/>
+				{this.state.baihuo1}
+				<img className="bu-bottom" src="images/1488980695836.jpg"/>
+				{this.state.baihuo2}
+			</div>
+			<div className="tuijian">热门推荐</div>
+			<div className="tuijian-item">
+				{this.state.tuijian}
 			</div>
 		</div>
 	)	
@@ -84,6 +89,22 @@ class Home extends React.Component {
 			}
 			this.setState({
 				baihuo2:arr4
+			})
+		})
+		fetch("./data/data.json")
+		.then(response=>response.json())
+		.then(res=>{
+			console.log(res.tuijian);
+			var arr5=[];
+			for(var k in res.tuijian){
+				arr5.push(<Link to="" className="bottom">
+							<img className="img" src={res.tuijian[k].img} />
+							<p>{res.tuijian[k].title}</p>
+							<span>{res.tuijian[k].price}</span>
+						  </Link>)
+			}
+			this.setState({
+				tuijian:arr5
 			})
 		})
   }
