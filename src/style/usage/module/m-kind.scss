@@ -3,7 +3,7 @@
 .m-kind{
 	height:100%;
 	width:100%;
-	
+	padding-top:0.44rem;
 	.kindlist{
 		@include flexbox();
 		@include flex-direction();
