@@ -27,7 +27,7 @@ class Index extends React.Component {
 			</div>
 		</header>
 		<section>
-			{this.props.children}
+			{this.props.children}	
 		</section>
 		<footer>
 			<ul>
@@ -55,8 +55,12 @@ class Index extends React.Component {
 						<b>我的</b>
 					</Link>
 				</li>
+				
 			</ul>
 		</footer>
+		<Link to="/kindindex"  ref="kindindex" onClick={this.clickHandler.bind(this,"kindindex")} title="kinindex" activeClassName="active">
+						
+		</Link>
 	  </div>
     )
   }
