@@ -519,7 +519,7 @@ body {
 html {
   background-color: #eee;
   color: #212121;
-  font-size: 100px;
+  font-size: 31.25vw;
   -webkit-user-select: none;
   user-select: none; }
 
@@ -1412,7 +1412,7 @@ body {
 html {
   background-color: #eee;
   color: #212121;
-  font-size: 100px;
+  font-size: 31.25vw;
   -webkit-user-select: none;
   user-select: none; }
 
@@ -1713,6 +1713,10 @@ a {
   font-family: yofont;
   src: url(/iconfont/iconfont5.woff) format("woff"), url(/iconfont/iconfont5.ttf) format("truetype"); }
 
+@font-face {
+  font-family: yofont;
+  src: url(/iconfont/iconfont6.woff) format("woff"), url(/iconfont/iconfont6.ttf) format("truetype"); }
+
 body {
   position: relative; }
 
@@ -1763,7 +1767,7 @@ body {
     flex: 1;
     overflow-y: auto; }
   .m-index footer {
-    height: 0.5rem;
+    height: 0.51rem;
     background: #f9f9f9;
     position: relative; }
     .m-index footer::after {
@@ -1825,14 +1829,24 @@ body {
           color: #000;
           opacity: 0.8; }
           .m-index footer ul li a b {
-            font-weight: normal; }
+            font-weight: normal;
+            font-size: 0.12rem; }
+          .m-index footer ul li a i {
+            font-size: 0.25rem;
+            width: 0.25rem;
+            height: 0.3rem; }
           .m-index footer ul li a.active {
             opacity: 1;
             color: #ff5c50; }
 
 .m-home div.swiper {
+  width: 100%;
   height: 1.55297rem;
   background: gray; }
+  .m-home div.swiper div {
+    width: 100%; }
+    .m-home div.swiper div img {
+      width: 100%; }
 
 .m-home > ul {
   height: 1.87rem;
@@ -1847,6 +1861,22 @@ body {
     width: 0.8rem;
     height: 0.8rem; }
 
+.m-home .supermarket {
+  width: 100%;
+  height: 0.4rem;
+  display: block; }
+  .m-home .supermarket img {
+    width: 100%;
+    height: 100%; }
+
+.m-home .baihuo {
+  width: 100%;
+  height: 1.9rem;
+  background: #fff; }
+  .m-home .baihuo .top {
+    width: 50%;
+    height: 0.85rem; }
+
 .m-kind {
   height: 100%;
   width: 100%;
@@ -1860,32 +1890,58 @@ body {
     -webkit-flex-direction: row;
     flex-direction: row;
     width: 100%;
-    height: 400px;
-    background: yellow; }
+    height: 400px; }
     .m-kind .kindlist ul {
       width: 85px;
-      height: 100%;
-      background: pink; }
+      height: 500px;
+      background: #fff; }
+      .m-kind .kindlist ul .active li {
+        background: #fff;
+        border-right: 1px transparent solid;
+        width: 85px; }
       .m-kind .kindlist ul li {
         width: 85px;
         height: 48px;
         line-height: 48px;
-        text-align: center; }
-        .m-kind .kindlist ul li a {
-          height: 100%;
-          width: 100%;
-          color: #363636;
-          background: #fbfbfb;
-          display: inline-block;
-          border-bottom: 1px #ececec solid;
-          border-right: 1px #ececec solid; }
+        text-align: center;
+        font-size: 13px;
+        color: #363636;
+        background: #fbfbfb;
+        border-bottom: 1px #ececec solid;
+        border-right: 1px #ececec solid; }
     .m-kind .kindlist div {
-      height: 300px;
-      width: 100%;
-      background: red; }
+      height: 315px;
+      width: 100%; }
       .m-kind .kindlist div ul {
         width: 100%;
+        background: #fff;
         height: auto; }
         .m-kind .kindlist div ul li {
           width: 100%;
-          height: 45px; }
+          height: 60px;
+          line-height: 60px;
+          border: none; }
+          .m-kind .kindlist div ul li a {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: #fff;
+            color: #363636;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            justify-content: space-between; }
+            .m-kind .kindlist div ul li a b {
+              margin-left: 10px;
+              font-weight: normal;
+              font-size: 14px; }
+            .m-kind .kindlist div ul li a i {
+              margin-right: 10px;
+              font-size: 20px;
+              color: #d6d6d6; }

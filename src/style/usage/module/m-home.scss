@@ -25,4 +25,50 @@
 			height:0.8rem;
 		}
 	}
+	.supermarket{
+		width:100%;
+		height:0.4rem;
+		display:block;
+		img{
+			width:100%;
+			height:100%;
+		}
+	}
+	.baihuo{
+		width:100%;
+		height:1.9rem;
+		background:#fff;
+		margin-top:-3px;
+		a.top{
+			display:inline-block;
+			width:50%;
+			height:0.8rem;
+			margin-top:-3px;
+			img{
+				width:100%;
+				height:80px;
+			}
+		}
+		.bu-top{
+			width:100%;
+			height:0.13rem;
+		}
+		.bu-bottom{
+			width:100%;
+			height:0.06rem;
+			margin-top:-15px;
+			z-index:99;
+		}
+		a.bottom{
+			display:inline-block;
+			width:33.333%;
+			height:1.06rem;
+			margin-top:-15px;
+			
+			img{
+				width:100%;
+				height:100%;
+			}
+		}
+	}
 }

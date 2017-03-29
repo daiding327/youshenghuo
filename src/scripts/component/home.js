@@ -7,7 +7,9 @@ class Home extends React.Component {
     super(props)
 	this.state={
 		list:[<div/>],
-		categery:[<div/>]
+		categery:[<div/>],
+		baihuo1:[<div/>],
+		baihuo2:[<div/>]
 	}
     
   }
@@ -21,6 +23,16 @@ class Home extends React.Component {
 				</Carousel>
 				<div className="u-categery">
 					{this.state.categery}
+				</div>
+				<Link to="/supermarket" className="supermarket">
+					<img src="./images/more.jpg"/>
+				</Link>
+				<div className="baihuo">
+					<img className="bu-top" src="images/1488980649202.jpg"/>
+					{this.state.baihuo1}
+					<img className="bu-bottom" src="images/1488980695836.jpg"/>
+					{this.state.baihuo2}
+					
 				</div>
 			</div>
 		</div>
@@ -48,6 +60,30 @@ class Home extends React.Component {
 			}
 			this.setState({
 				categery:arr2
+			})
+		})
+		fetch("./data/data.json")
+		.then(response=>response.json())
+		.then(res=>{
+			console.log(res.supermarket1);
+			var arr3=[];
+			for(var k in res.supermarket1){
+				arr3.push(<Link to="" className="top"><img className="img" src={res.supermarket1[k]} /></Link>)
+			}
+			this.setState({
+				baihuo1:arr3
+			})
+		})
+		fetch("./data/data.json")
+		.then(response=>response.json())
+		.then(res=>{
+			console.log(res.supermarket2);
+			var arr4=[];
+			for(var k in res.supermarket2){
+				arr4.push(<Link to="" className="bottom"><img className="img" src={res.supermarket2[k]} /></Link>)
+			}
+			this.setState({
+				baihuo2:arr4
 			})
 		})
   }

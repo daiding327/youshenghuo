@@ -10,6 +10,12 @@ import Cart from './component/cart.js'
 import Home from './component/home.js'
 import My from './component/my.js'
 import One from './component/one.js'
+import Two from './component/two.js'
+import Three from './component/three.js'
+import Four from './component/four.js'
+import Five from './component/five.js'
+import Six from './component/six.js'
+import Supermarket from './component/supermarket.js'
 
 ReactDOM.render(
 	<Router history={hashHistory}>
@@ -17,9 +23,16 @@ ReactDOM.render(
 			<IndexRedirect to="/home"></IndexRedirect>
 			<Route path="home" component={Home}></Route>
 			<Route path="kind" component={Kind}>
+				<IndexRedirect to="one"></IndexRedirect>
 				<Route path="one" component={One}></Route>
+				<Route path="two" component={Two}></Route>
+				<Route path="three" component={Three}></Route>
+				<Route path="four" component={Four}></Route>
+				<Route path="five" component={Five}></Route>
+				<Route path="six" component={Six}></Route>
 			</Route>
 			<Route path="cart" component={Cart}></Route>
+			<Route path="supermarket" component={Supermarket}></Route>
 			<Route path="my" component={My}></Route>
 		</Route>
 	</Router>,
