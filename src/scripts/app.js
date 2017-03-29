@@ -16,6 +16,9 @@ import Four from './component/four.js'
 import Five from './component/five.js'
 import Six from './component/six.js'
 import Supermarket from './component/supermarket.js'
+import Lunone from './component/lunone.js'
+import Jiadian from './component/categery.js'
+
 
 ReactDOM.render(
 	<Router history={hashHistory}>
@@ -34,7 +37,10 @@ ReactDOM.render(
 			<Route path="cart" component={Cart}></Route>
 			<Route path="supermarket" component={Supermarket}></Route>
 			<Route path="my" component={My}></Route>
+			<Route path="lunone" component={Lunone}></Route>
+			<Route path="jiadian" component={Jiadian}></Route>
 		</Route>
+		
 	</Router>,
 	document.getElementById('root')
 )

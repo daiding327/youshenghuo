@@ -4,8 +4,13 @@
 		width:100%;
 		height:1.55297rem;
 		background:gray;
-		div{
+		div.yo-carousel{
 			width:100%;
+			a{
+				display:block;
+				width:100%;
+				height:100%;
+			}
 			img{
 				width:100%;
 			}
@@ -38,15 +43,15 @@
 		width:100%;
 		height:2.1rem;
 		background:#fff;
-		margin-top:-3px;
+		margin-top:-0.03rem;
 		a.top{
 			display:inline-block;
 			width:50%;
 			height:0.8rem;
-			margin-top:-3px;
+			margin-top:-0.03rem;
 			img{
 				width:100%;
-				height:80px;
+				height:0.8rem;
 			}
 		}
 		.bu-top{
@@ -56,14 +61,14 @@
 		.bu-bottom{
 			width:100%;
 			height:0.06rem;
-			margin-top:-15px;
+			margin-top:-0.15rem;
 			z-index:99;
 		}
 		a.bottom{
 			display:inline-block;
 			width:33.333%;
 			height:1.06rem;
-			margin-top:-15px;
+			margin-top:-0.15rem;
 			
 			img{
 				width:100%;
