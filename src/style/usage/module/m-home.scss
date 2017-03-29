@@ -1,8 +1,15 @@
 
 .m-home{
 	div.swiper{
+		width:100%;
 		height:1.55297rem;
 		background:gray;
+		div{
+			width:100%;
+			img{
+				width:100%;
+			}
+		}
 	}
 	>ul{
 		height:1.87rem;

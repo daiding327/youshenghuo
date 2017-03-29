@@ -50,7 +50,7 @@ body{
 		overflow-y:auto;
 	}
 	footer{
-		height:0.5rem;
+		height:0.51rem;
 		background:#f9f9f9;
 		@include border(1px 0 0 0,gray);
 		ul{
@@ -69,9 +69,14 @@ body{
 					color:#000;
 					b{
 						font-weight:normal;
+						font-size:0.12rem;
 					}
 					opacity:0.8;
-					
+					i{
+						font-size:0.25rem;
+						width:0.25rem;
+						height:0.3rem;
+					}
 					&.active{
 						opacity:1;
 						color:#ff5c50;
