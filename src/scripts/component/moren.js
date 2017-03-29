@@ -3,32 +3,40 @@ import React from 'react';
 class Moren extends React.Component {
   constructor (props) {
     super(props)
-    
+    this.state={
+    	list:[]
+    }
   }
   
   render() {
 	return (
 		<div className="box">
-				<img src="" alt=""/>
-				<p>asdsad</p>	
+			{this.state.list} 
+			
 		</div>
 	)	
   }
 
-  componentDidMount({
-	fetch("/students.json")
-	.then(
-	    function(response){
-	        console.log(response.headers.get('Content-Type'));
-	        console.log(response.headers.get('Date'));
-	        console.log(response.status);
-	        console.log(response.statusText);
-	        console.log(response.type);
-	        console.log(response.url);
-	    }
-)
+	componentDidMount(){
+	  	fetch("./data/data.json")
+		.then(response=>response.json())
+		.then(res=>{
+			var arr=[];
+			for(var k in res.swiper){
+				arr.push(<div className="small"><img src={res.swiper[k]} alt=""/><p>{res.tuijian[k].title}</p></div>)
+			}
+			this.setState({
+				list:arr
+			})
+		})
+		
+	}
+	
+	  	
+				
 
-  })
+	
+  
 }
 
 

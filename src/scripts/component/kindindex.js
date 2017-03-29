@@ -15,14 +15,11 @@ class Kindindex extends React.Component {
   render() {
     return (
       <div className="m-kindindex">
-			<ul>
-
+			<ul id="ul">
 					<li><Link to="kindindex/moren" ref="moren" activeClassName="active">默认</Link></li>
-				
-				
-				<li className="befo">销量</li>
-				<li className="befo">价格</li>
-				<li className="befo"><i className="yo-ico">&#xe603;</i></li>
+					<li><Link to="kindindex/moren" ref="moren" activeClassName="active">销量</Link></li>
+					<li><Link to="kindindex/moren" ref="moren" activeClassName="active">价格</Link></li>
+					<li><Link to="kindindex/moren" ref="moren" activeClassName="active"><i className="yo-ico">&#xe603;</i></Link></li>
 			</ul>
 			<div className="bot">
 				

@@ -3,7 +3,7 @@
 .m-kind{
 	height:100%;
 	width:100%;
-	padding-top:0.44rem;
+	padding-top:44px;
 	.kindlist{
 		@include flexbox();
 		@include flex-direction();
@@ -11,13 +11,14 @@
 		height:400px;
 		ul{
 			width:85px;
-			height:500px;
-			background: #fff;
+			height:auto;
+			
 			.active{
 				li{
 					background: #fff;
 					border-right:1px transparent solid;
 					width: 85px;
+					color:#e63d59;
 				}
 			}
 			li{

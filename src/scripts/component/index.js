@@ -18,12 +18,16 @@ class Index extends React.Component {
       <div className="m-index">
 		<header>
 			<div className="u-header">
-				<i  className="yo-ico">&#xe60b;</i>
+				<Link to="/kind">
+					<i  className="yo-ico">&#xe60b;</i>
+				</Link>
 				<div>
 					<i  className="yo-ico">&#xe504;</i>
 					<input type="text" placeholder="搜索商品"/>
 				</div>
-				<i className="yo-ico">&#xe649;</i>
+				<Link to="/my">
+					<i className="yo-ico">&#xe649;</i>
+				</Link>
 			</div>
 		</header>
 		<section>

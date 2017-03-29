@@ -15,8 +15,11 @@ import Three from './component/three.js'
 import Four from './component/four.js'
 import Five from './component/five.js'
 import Six from './component/six.js'
+
 import Kindindex from './component/kindindex.js'
 import Moren from './component/moren.js'
+
+import Supermarket from './component/supermarket.js'
 
 ReactDOM.render(
 	<Router history={hashHistory}>
@@ -33,6 +36,7 @@ ReactDOM.render(
 				<Route path="six" component={Six}></Route>
 			</Route>
 			<Route path="cart" component={Cart}></Route>
+			<Route path="supermarket" component={Supermarket}></Route>
 			<Route path="my" component={My}></Route>
 			<Route path="kindindex" component={Kindindex}>
 				<Route path="moren" component={Moren}></Route>
