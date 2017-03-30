@@ -1,5 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router'
+import Scroller from '../../component_dev/scroller/src'
+import List from '../../component_dev/list/src'
 
 class Categery extends React.Component {
   constructor (props) {
@@ -13,15 +15,20 @@ class Categery extends React.Component {
   render() {
     return (
       <div className="m-categery">
-		<div className="categery-head"><img src="images/1489042105406.jpg"/></div>
-		<div className="categery-headbottom"><img src="images/1489042079099.jpg"/></div>
-		<div className="xinbangyang-item">
-			{this.state.xinbangyang}
-		</div>
-		<div className="categery-one"><img src="images/1489043434293.jpg"/></div>
-		<ul className="categery-happy">
-			{this.state.happycall}
-		</ul>
+		  <Scroller
+			scrollY={true}
+			extraClass ='yo-scroller yo-scroller-fullscreen'
+		  >
+			<div className="categery-head"><img src="images/1489042105406.jpg"/></div>
+			<div className="categery-headbottom"><img src="images/1489042079099.jpg"/></div>
+			<div className="xinbangyang-item">
+				{this.state.xinbangyang}
+			</div>
+			<div className="categery-one"><img src="images/1489043434293.jpg"/></div>
+			<ul className="categery-happy">
+				{this.state.happycall}
+			</ul>
+		  </Scroller>
 	  </div>
     )
   }

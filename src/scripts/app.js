@@ -1,5 +1,6 @@
 require('../style/app.scss')
-
+import {Provider} from 'react-redux'
+import {store} from './redux/store'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Router,Route,IndexRoute,IndexRedirect,hashHistory} from 'react-router'
@@ -25,32 +26,34 @@ import Jiadian from './component/categery.js'
 
 
 ReactDOM.render(
-	<Router history={hashHistory}>
-		<Route path="/" component={Index}>
-			<IndexRedirect to="/home"></IndexRedirect>
-			<Route path="home" component={Home}></Route>
-			<Route path="kind" component={Kind}>
-				<IndexRedirect to="one"></IndexRedirect>
-				<Route path="one" component={One}></Route>
-				<Route path="two" component={Two}></Route>
-				<Route path="three" component={Three}></Route>
-				<Route path="four" component={Four}></Route>
-				<Route path="five" component={Five}></Route>
-				<Route path="six" component={Six}></Route>
+	<Provider store={store}>
+		<Router history={hashHistory}>
+			<Route path="/" component={Index}>
+				<IndexRedirect to="/home"></IndexRedirect>
+				<Route path="home" component={Home}></Route>
+				<Route path="kind" component={Kind}>
+					<IndexRedirect to="one"></IndexRedirect>
+					<Route path="one" component={One}></Route>
+					<Route path="two" component={Two}></Route>
+					<Route path="three" component={Three}></Route>
+					<Route path="four" component={Four}></Route>
+					<Route path="five" component={Five}></Route>
+					<Route path="six" component={Six}></Route>
+				</Route>
+				<Route path="cart" component={Cart}></Route>
+				<Route path="supermarket" component={Supermarket}></Route>
+				<Route path="my" component={My}></Route>
+
+				<Route path="kindindex" component={Kindindex}>
+					<Route path="moren" component={Moren}></Route>
+				</Route>
+
+				
+				<Route path="jiadian" component={Jiadian}></Route>
+
 			</Route>
-			<Route path="cart" component={Cart}></Route>
-			<Route path="supermarket" component={Supermarket}></Route>
-			<Route path="my" component={My}></Route>
-
-			<Route path="kindindex" component={Kindindex}>
-				<Route path="moren" component={Moren}></Route>
-			</Route>
-
-			<Route path="lunone" component={Lunone}></Route>
-			<Route path="jiadian" component={Jiadian}></Route>
-
-		</Route>
-		
-	</Router>,
+			<Route path="/lunone" component={Lunone}></Route>
+		</Router>
+	</Provider>,
 	document.getElementById('root')
 )
