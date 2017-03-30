@@ -1,10 +1,10 @@
 {
 	"swiper":{
-		"1":"images/1489380460128.jpg",
-		"2":"images/1489468346157.jpg",
-		"3":"images/1489972261437.jpg",
-		"4":"images/1490601963948.jpg",
-		"5":"images/1490602108065.jpg"
+		"1":{"img":"images/1489380460128.jpg","lujing":"/lunone"},
+		"2":{"img":"images/1489468346157.jpg","lujing":"/lunone"},
+		"3":{"img":"images/1489972261437.jpg","lujing":"/lunone"},
+		"4":{"img":"images/1490601963948.jpg","lujing":"/lunone"},
+		"5":{"img":"images/1490602108065.jpg","lujing":"/lunone"}
 	},
 	"kind":{
 		"img1":"images/1481507929526.jpg",
@@ -85,6 +85,45 @@
 			"img":"images/12.jpg",
 			"title":"大润窑 汝窑10头茶具",
 			"price":"￥110.00"
+		}
+	},
+	"xinbangyang":{
+		"1":{
+			"img":"images/1479196617093.jpg",
+			"title":"新榜样麦饭石炒锅",
+			"price":"￥198.00"
+		},
+		"2":{
+			"img":"images/1463805456781.jpg",
+			"title":"新榜样 7.0高双管韩式多功能电热锅",
+			"price":"￥210.00"
+		},
+		"3":{
+			"img":"images/1463823042384.jpg",
+			"title":"新榜样 真空节能养生锅(32cm)",
+			"price":"￥240.00"
+		},
+		"4":{
+			"img":"images/1463816511368.jpg",
+			"title":"新榜样 水性元宝锅",
+			"price":"￥240.00"
+		}
+	},
+	"happycall":{
+		"1":{
+			"img":"images/1459593496631.jpg",
+			"title":"HAPPYCALL IH双面迷你气压锅",
+			"price":"￥689.00"
+		},
+		"2":{
+			"img":"images/1459594466954.jpg",
+			"title":"HAPPYCALL IH真空压力不粘汤锅 V24L",
+			"price":"￥1480.00"
+		},
+		"3":{
+			"img":"images/1459594789430.jpg",
+			"title":"HAPPYCALL 耐酸不粘汤锅24cm",
+			"price":"￥655.00"
 		}
 	}
 }

@@ -49,7 +49,7 @@ class Home extends React.Component {
 		.then(res=>{
 			var arr=[];
 			for(var k in res.swiper){
-				arr.push(<li className="item"><img className="img" src={res.swiper[k]} /></li>)
+				arr.push(<li className="item"><Link to={res.swiper[k].lujing}><img className="img" src={res.swiper[k].img} /></Link></li>)
 			}
 			this.setState({
 				list:arr

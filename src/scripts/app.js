@@ -20,6 +20,9 @@ import Kindindex from './component/kindindex.js'
 import Moren from './component/moren.js'
 
 import Supermarket from './component/supermarket.js'
+import Lunone from './component/lunone.js'
+import Jiadian from './component/categery.js'
+
 
 ReactDOM.render(
 	<Router history={hashHistory}>
@@ -38,10 +41,16 @@ ReactDOM.render(
 			<Route path="cart" component={Cart}></Route>
 			<Route path="supermarket" component={Supermarket}></Route>
 			<Route path="my" component={My}></Route>
+<<<<<<< HEAD
 			<Route path="kindindex" component={Kindindex}>
 				<Route path="moren" component={Moren}></Route>
 			</Route>
+=======
+			<Route path="lunone" component={Lunone}></Route>
+			<Route path="jiadian" component={Jiadian}></Route>
+>>>>>>> master
 		</Route>
+		
 	</Router>,
 	document.getElementById('root')
 )

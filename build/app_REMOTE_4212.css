@@ -1719,7 +1719,6 @@ a {
 
 @font-face {
   font-family: yofont;
-  src: url(/iconfont/iconfont7.woff) format("woff"), url(/iconfont/iconfont7.ttf) format("truetype");
   src: url(/iconfont/iconfont9.woff) format("woff"), url(/iconfont/iconfont9.ttf) format("truetype"); }
 
 body {
@@ -1758,11 +1757,7 @@ body {
         border-radius: 0.08rem; }
         .m-index header .u-header div i {
           width: 10%;
-<<<<<<< HEAD
-          font-size: 16px;
-=======
           font-size: 0.16rem;
->>>>>>> master
           display: inline-block;
           color: #000; }
         .m-index header .u-header div input {
@@ -2020,87 +2015,6 @@ body {
               font-size: 20px;
               color: #d6d6d6; }
 
-<<<<<<< HEAD
-section {
-  margin-top: 44px;
-  height: 100%;
-  width: 100%; }
-  section .m-kindindex {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    height: 100%;
-    width: 100%; }
-    section .m-kindindex ul {
-      height: 45px;
-      width: 100%;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: row;
-      flex-direction: row;
-      justify-content: between; }
-      section .m-kindindex ul li {
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-        flex: 1;
-        width: .1px;
-        text-align: center;
-        height: 45px;
-        position: relative;
-        background: #fff;
-        font-size: 16px; }
-        section .m-kindindex ul li a {
-          line-height: 45px;
-          display: inline-block;
-          color: #333;
-          width: 100%;
-          height: 100%;
-          background: blue; }
-      section .m-kindindex ul .befo:before {
-        content: "";
-        display: inline-block;
-        width: 1px;
-        height: 30px;
-        background: #e3e3e3;
-        position: absolute;
-        left: 0px;
-        top: 10px; }
-
-.box {
-  width: 100%;
-  height: 100%; }
-  .box .small {
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    flex-direction: row; }
-    .box .small img {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1;
-      flex: 1;
-      width: .1px;
-      width: 112px;
-      height: 112px;
-      background: yellow; }
-    .box .small p {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1;
-      flex: 1;
-      width: .1px;
-      background: orange; }
-=======
 .m-lunone {
   width: 100%;
   height: auto; }
@@ -2261,4 +2175,3 @@ section {
         .m-categery .categery-happy .happy div span {
           font-size: 0.12rem;
           color: red; }
->>>>>>> master

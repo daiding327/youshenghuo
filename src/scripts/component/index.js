@@ -5,18 +5,32 @@ class Index extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      title: '榜单'
+      title: '榜单',
+	  flag:true
     }
   }
-  clickHandler(type){
+   clickHandler(type){
 	  this.setState({
 		  title:this.refs[type].props.title
+	  })
+  }
+  clickHandler1(type){
+	  this.setState({
+		  title:this.refs[type].props.title,
+		  flag:false
+	  })
+  }
+  
+  clickHandler2(type){
+	  this.setState({
+		  title:this.refs[type].props.title,
+		  flag:true
 	  })
   }
   render() {
     return (
       <div className="m-index">
-		<header>
+		<header style={{background:this.state.flag==false ? 'rgba(255,92,80,1)' : 'rgba(0,0,0,0.3)'}}>
 			<div className="u-header">
 				<Link to="/kind">
 					<i  className="yo-ico">&#xe60b;</i>
@@ -30,19 +44,24 @@ class Index extends React.Component {
 				</Link>
 			</div>
 		</header>
+<<<<<<< HEAD
 		<section>
 			{this.props.children}	
+=======
+		<section style={{overflowY:this.state.flag==false ? 'hidden' : 'auto'}}>
+			{this.props.children}
+>>>>>>> master
 		</section>
 		<footer>
 			<ul>
 				<li>
-					<Link to="/home" ref="home" onClick={this.clickHandler.bind(this,"home")} title="首页" activeClassName="active">
+					<Link to="/home" ref="home" onClick={this.clickHandler2.bind(this,"home")} title="首页" activeClassName="active">
 						<i className="yo-ico">&#xe6ee;</i>
 						<b>首页</b>
 					</Link>
 				</li>
 				<li>
-					<Link to="/kind"  ref="kind" onClick={this.clickHandler.bind(this,"kind")} title="分类" activeClassName="active">
+					<Link to="/kind"  ref="kind" onClick={this.clickHandler1.bind(this,"kind")} title="分类" activeClassName="active">
 						<i className="yo-ico">&#xe6bb;</i>
 						<b>分类</b>
 					</Link>
