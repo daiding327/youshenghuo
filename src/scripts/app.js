@@ -41,7 +41,7 @@ ReactDOM.render(
 					<Route path="six" component={Six}></Route>
 				</Route>
 				<Route path="cart" component={Cart}></Route>
-				<Route path="supermarket" component={Supermarket}></Route>
+				
 				<Route path="my" component={My}></Route>
 
 				<Route path="kindindex" component={Kindindex}>
@@ -50,6 +50,7 @@ ReactDOM.render(
 			</Route>
 			<Route path="/lunone" component={Lunone}></Route>
 			<Route path="jiadian" component={Jiadian}></Route>
+			<Route path="supermarket" component={Supermarket}></Route>
 		</Router>
 	</Provider>,
 	document.getElementById('root')
