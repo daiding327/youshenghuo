@@ -47,12 +47,9 @@ ReactDOM.render(
 				<Route path="kindindex" component={Kindindex}>
 					<Route path="moren" component={Moren}></Route>
 				</Route>
-
-				
-				<Route path="jiadian" component={Jiadian}></Route>
-
 			</Route>
 			<Route path="/lunone" component={Lunone}></Route>
+			<Route path="jiadian" component={Jiadian}></Route>
 		</Router>
 	</Provider>,
 	document.getElementById('root')
