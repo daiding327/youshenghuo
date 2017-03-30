@@ -73,7 +73,7 @@ class Home extends React.Component {
 			console.log(res.supermarket1);
 			var arr3=[];
 			for(var k in res.supermarket1){
-				arr3.push(<Link to="" className="top"><img className="img" src={res.supermarket1[k]} /></Link>)
+				arr3.push(<Link to="/supermarket" className="top"><img className="img" src={res.supermarket1[k]} /></Link>)
 			}
 			this.setState({
 				baihuo1:arr3
@@ -85,7 +85,7 @@ class Home extends React.Component {
 			console.log(res.supermarket2);
 			var arr4=[];
 			for(var k in res.supermarket2){
-				arr4.push(<Link to="" className="bottom"><img className="img" src={res.supermarket2[k]} /></Link>)
+				arr4.push(<Link to="/supermarket" className="bottom"><img className="img" src={res.supermarket2[k]} /></Link>)
 			}
 			this.setState({
 				baihuo2:arr4
@@ -97,7 +97,7 @@ class Home extends React.Component {
 			console.log(res.tuijian);
 			var arr5=[];
 			for(var k in res.tuijian){
-				arr5.push(<Link to="" className="bottom">
+				arr5.push(<Link to="" className="bottom" onClick={this.props.change}>
 							<img className="img" src={res.tuijian[k].img} />
 							<p>{res.tuijian[k].title}</p>
 							<span>{res.tuijian[k].price}</span>
