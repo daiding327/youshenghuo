@@ -41,14 +41,14 @@ ReactDOM.render(
 			<Route path="cart" component={Cart}></Route>
 			<Route path="supermarket" component={Supermarket}></Route>
 			<Route path="my" component={My}></Route>
-<<<<<<< HEAD
+
 			<Route path="kindindex" component={Kindindex}>
 				<Route path="moren" component={Moren}></Route>
 			</Route>
-=======
+
 			<Route path="lunone" component={Lunone}></Route>
 			<Route path="jiadian" component={Jiadian}></Route>
->>>>>>> master
+
 		</Route>
 		
 	</Router>,

@@ -44,13 +44,11 @@ class Index extends React.Component {
 				</Link>
 			</div>
 		</header>
-<<<<<<< HEAD
-		<section>
-			{this.props.children}	
-=======
+
+		
 		<section style={{overflowY:this.state.flag==false ? 'hidden' : 'auto'}}>
 			{this.props.children}
->>>>>>> master
+
 		</section>
 		<footer>
 			<ul>
