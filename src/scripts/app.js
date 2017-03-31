@@ -1,6 +1,4 @@
 require('../style/app.scss')
-import {Provider} from 'react-redux'
-import {store} from './redux/store'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Router,Route,IndexRoute,IndexRedirect,hashHistory} from 'react-router'
@@ -19,14 +17,17 @@ import Six from './component/six.js'
 
 import Kindindex from './component/kindindex.js'
 import Moren from './component/moren.js'
+import Sales from './component/sales.js'
+import Jiage from './component/jiage.js'
+import Random from './component/random.js'
 
 import Supermarket from './component/supermarket.js'
 import Lunone from './component/lunone.js'
 import Jiadian from './component/categery.js'
+import Xiang from './component/xiang.js'
 
 
 ReactDOM.render(
-	<Provider store={store}>
 		<Router history={hashHistory}>
 			<Route path="/" component={Index}>
 				<IndexRedirect to="/home"></IndexRedirect>
@@ -45,13 +46,17 @@ ReactDOM.render(
 				<Route path="my" component={My}></Route>
 
 				<Route path="kindindex" component={Kindindex}>
+					<IndexRedirect to="moren"></IndexRedirect>
 					<Route path="moren" component={Moren}></Route>
+					<Route path="sales" component={Sales}></Route>
+					<Route path="jiage" component={Jiage}></Route>
+					<Route path="random" component={Random}></Route>
 				</Route>
 			</Route>
 			<Route path="/lunone" component={Lunone}></Route>
 			<Route path="jiadian" component={Jiadian}></Route>
 			<Route path="supermarket" component={Supermarket}></Route>
-		</Router>
-	</Provider>,
+			<Route path="xiang" component={Xiang}></Route>
+		</Router>,
 	document.getElementById('root')
 )

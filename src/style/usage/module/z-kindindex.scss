@@ -24,8 +24,19 @@
 					color:#333;
 					width:100%;
 					height:100%;
-					background:blue;
+					&.active{
+							border-bottom: solid 2px #e63d59;
+							color:#e63d59;
+							span{
+								position: relative;
+								display: inline-block;
+								border: 5px solid transparent;
+								border-top: 5px solid #e63d59;
+								top:3px;
+							}
+					}	
 				}
+
 			}
 			.befo:before{
 					content:"";

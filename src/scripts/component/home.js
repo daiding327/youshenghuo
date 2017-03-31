@@ -121,7 +121,7 @@ class Home extends React.Component {
 			console.log(res.tuijian);
 			var arr5=[];
 			for(var k in res.tuijian){
-				arr5.push(<Link to="" className="bottom" onClick={this.props.change}>
+				arr5.push(<Link to="/xiang" className="bottom">
 							<img className="img" src={res.tuijian[k].img} />
 							<p>{res.tuijian[k].title}</p>
 							<span>{res.tuijian[k].price}</span>

@@ -1,4 +1,6 @@
-
+section{
+	background:#fff;
+}
 
 .m-kind{
 	height:100%;
@@ -11,8 +13,9 @@
 		height:400px;
 		ul{
 			width:85px;
-			height:auto;
-			
+			height:500px;
+			background: #fff;
+			border-right:1px #ececec solid;
 			.active{
 				li{
 					background: #fff;

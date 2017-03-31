@@ -1,7 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router'
-import {mapStateToProps,mapDispatchToProps} from '../redux/store'
-import {connect} from 'react-redux'
 
 class Index extends React.Component {
   constructor (props) {
@@ -83,20 +81,11 @@ class Index extends React.Component {
   }
 
   componentDidMount() {
-    let appear = this.props.routes[1].title
-    this.props.onChange({
-      type: 'SETTITLE',
-      title: appear
-    })
+    
   }
   
 }
-export default connect (
-	mapStateToProps,
-	mapDispatchToProps
-)(Index)
-
-//export default Index
+export default Index
 
 
 

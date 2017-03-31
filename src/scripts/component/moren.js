@@ -16,27 +16,27 @@ class Moren extends React.Component {
 		</div>
 	)	
   }
-
 	componentDidMount(){
 	  	fetch("./data/data.json")
 		.then(response=>response.json())
 		.then(res=>{
 			var arr=[];
-			for(var k in res.swiper){
-				arr.push(<div className="small"><img src={res.swiper[k]} alt=""/><p>{res.tuijian[k].title}</p></div>)
+			for(var k in res.guo){
+				arr.push(
+						<div className="small">
+							<img src={res.guo[k].img} alt=""/>
+							<p>
+								<h3>{res.guo[k].title}</h3>
+								<span>￥{res.guo[k].price}.00<span>{res.guo[k].sales}人评价</span></span>
+							</p>
+						</div>
+					)
 			}
 			this.setState({
 				list:arr
 			})
-		})
-		
-	}
-	
-	  	
-				
-
-	
-  
+		})	
+	} 
 }
 
 
