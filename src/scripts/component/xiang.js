@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router'
 import Scroller from '../../component_dev/scroller/src'
+import Modal from '../../component_dev/modal/src/'
 import Carousel from '../../component_dev/carousel/src'
 
 class Xiang extends React.Component {
@@ -12,6 +13,7 @@ class Xiang extends React.Component {
 	this.tiao=this.tiao.bind(this)
 	this.changecolor=this.changecolor.bind(this)
 	this.jia=this.jia.bind(this)
+	this.hide=this.hide.bind(this)
 	this.state={
 		list:[<div/>],
 		item:{
@@ -24,11 +26,17 @@ class Xiang extends React.Component {
 		flag:false,
 		flag5:false,
 		city:[<div/>],
-		title:"江苏苏州市昆山市"
+		title:"江苏苏州市昆山市",
+		show:false,
+		xianshi:"请先登录哦"
 	} 
   }
+  hide(){
+	  this.setState({
+		  show:!this.state.show
+	  })
+  }
   jia () {
-	  
 	   var userID=localStorage.userID;
 	   if(userID){
 		   var url="http://datainfo.duapp.com/shopdata/updatecar.php?userID=userID&goodsID=12&number=1";
@@ -36,9 +44,18 @@ class Xiang extends React.Component {
 		  .then(response=>response.json())
 			.then(res=>{
 				console.log(res);
+				this.setState({
+					xianshi:"加入购物车成功",
+					show:!this.state.show
+				})
 			})
 	   }else{
-		   window.location.href="#/my"
+		   this.setState({
+				xianshi:"请先登录哦",
+				show:!this.state.show
+			})
+		  // window.location.href="#/my"
+		   
 	   }
 	  
   }
@@ -68,6 +85,11 @@ class Xiang extends React.Component {
   render() {
     return (
       <div className="m-xiang">
+		<Modal
+			show={this.state.show}
+		>
+			<p onClick={this.hide}>{this.state.xianshi}</p>
+		</Modal>
 		  <header>
 			<div className="font" onClick={this.tui}><i className="yo-ico">&#xe630;</i></div>
 			<div className="info">商品详情</div>

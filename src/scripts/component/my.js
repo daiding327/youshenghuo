@@ -1,5 +1,6 @@
 
 import React from 'react'
+import Modal from '../../component_dev/modal/src/'
 import {
 	Router,
 	Route,
@@ -12,11 +13,14 @@ class My extends React.Component {
   constructor (props) {
     super(props)
 	this.disappear=this.disappear.bind(this)
+	this.hide=this.hide.bind(this)
      this.state = {
       title: '榜单',
 	  flag:true,
 	  appear:false,
-	  userID:"请登录"
+	  userID:"请登录",
+	  show:false,
+	  xianshi:""
     }
     this.register = this.register.bind(this);
     this.state = {
@@ -33,6 +37,11 @@ class My extends React.Component {
 	  this.setState({
 			  appear:false,
 			  userID:"请登录"
+	})
+  }
+  hide () {
+	  this.setState({
+		  show:!this.state.show
 	})
   }
   componentWillMount () {
@@ -55,8 +64,11 @@ class My extends React.Component {
 		var password = this.refs.password.value;
 
 		if (!(/^1[34578]\d{9}$/.test(userID))) {
-			alert("请输入正确手机号码")
-			//写模态框
+			this.setState({
+				show:!this.state.show,
+				xianshi:"请输入正确手机号码"
+			})
+			
 		} else {
 			var url = "http://datainfo.duapp.com/shopdata/userinfo.php?status=register&userID=" + userID + "&password=" + password;
 			fetch(url)
@@ -64,8 +76,10 @@ class My extends React.Component {
 				.then(response => {
 					console.log(response)
 					if (response == 1) {
-						alert("注册成功!即将跳转到登入页面!");
-						//写模态框
+						this.setState({
+							show:!this.state.show,
+							xianshi:"注册成功!即将跳转到登入页面!"
+						})
 						//window.location.href = "#/home"
 						window.location.href = "#/login"
 
@@ -108,7 +122,11 @@ class My extends React.Component {
   render() {
 	return (
 		<div className="m-my">
-
+			<Modal
+				show={this.state.show}
+			>
+				<p onClick={this.hide}>{this.state.xianshi}</p>
+			</Modal>
               <header style={{background:this.state.flag==false ? 'rgba(255,92,80,1)' : 'rgba(0,0,0,0.3)'}}>
 			<div className="u-header">
 				<Link to="/kind">
