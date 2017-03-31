@@ -11,6 +11,10 @@ import {
 class Login extends React.Component {
 	constructor(props) {
 		super(props)
+		this.state = {
+      title: '榜单',
+	  flag:true
+    }
 		this.login = this.login.bind(this)
 
 	}
@@ -43,12 +47,41 @@ class Login extends React.Component {
 		}
 
 	}
+	 clickHandler(type){
+	  this.setState({
+		  title:this.refs[type].props.title
+	  })
+  }
+  clickHandler1(type){
+	  this.setState({
+		  flag:false
+	  })
+  }
+  
+  clickHandler2(type){
+	  this.setState({
+		  flag:true
+	  })
+  }
 
 	render() {
 
 		return (
 			<div className="login">
-				
+				<header style={{background:this.state.flag==false ? 'rgba(255,92,80,1)' : 'rgba(0,0,0,0.3)'}}>
+			<div className="u-header">
+				<Link to="/kind">
+					<i  className="yo-ico">&#xe60b;</i>
+				</Link>
+				<div>
+					<i  className="yo-ico">&#xe504;</i>
+					<input type="text" placeholder="搜索商品"/>
+				</div>
+				<Link to="/my">
+					<i className="yo-ico">&#xe649;</i>
+				</Link>
+			</div>
+		</header>
 					
 				  <div className="i"><img src="../images/1489468346157.jpg"/></div>
 					
