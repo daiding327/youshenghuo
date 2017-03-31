@@ -1,35 +1,18 @@
 import React from 'react'
 import {Link} from 'react-router'
-
+import { connect } from 'react-redux'
+import { mapStateToProps, mapDispatchToProps } from '../redux/store'
 
 class Index extends React.Component {
   constructor (props) {
     super(props)
-    this.state = {
-      title: '榜单',
-	  flag:true
-    }
+    
   }
-   clickHandler(type){
-	  this.setState({
-		  title:this.refs[type].props.title
-	  })
-  }
-  clickHandler1(type){
-	  this.setState({
-		  flag:false
-	  })
-  }
-  
-  clickHandler2(type){
-	  this.setState({
-		  flag:true
-	  })
-  }
+   
   render() {
     return (
       <div className="m-index">
-		<header style={{background:this.state.flag==false ? 'rgba(255,92,80,1)' : 'rgba(0,0,0,0.3)'}}>
+		<header style={{background:this.props.bgcolor}}>
 			<div className="u-header">
 				<Link to="/kind">
 					<i  className="yo-ico">&#xe60b;</i>
@@ -45,19 +28,19 @@ class Index extends React.Component {
 		</header>
 
 		
-		<section style={{overflowY:this.state.flag==false ? 'hidden' : 'auto'}}>
+		<section>
 			{this.props.children}
 		</section>
 		<footer>
 			<ul>
 				<li>
-					<Link to="/home" ref="home" onClick={this.clickHandler2.bind(this,"home")} title="首页" activeClassName="active">
+					<Link to="/home" activeClassName="active">
 						<i className="yo-ico">&#xe6ee;</i>
 						<b>首页</b>
 					</Link>
 				</li>
 				<li>
-					<Link to="/kind"  ref="kind" onClick={this.clickHandler1.bind(this,"kind")}  activeClassName="active">
+					<Link to="/kind"  activeClassName="active">
 						<i className="yo-ico">&#xe6bb;</i>
 						<b>分类</b>
 					</Link>
@@ -82,16 +65,23 @@ class Index extends React.Component {
   }
 
   componentDidMount() {
-    
+    let bgcolor = this.props.routes[1].bgcolor
+    this.props.onChange({
+      type: 'changecolor',
+      bgcolor: bgcolor
+    })
   }
   
 }
 
 
 
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Index)
 
-
-export default Index
+//export default Index
 
 
 

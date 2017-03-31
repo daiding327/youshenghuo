@@ -1,9 +1,9 @@
 import { createStore } from 'redux'
 
-function changer(state = {title:'榜单 ? 电影 ? 豆瓣'}, action) {
+function changer(state = {bgcolor:'rgba(0,0,0,0.3)'}, action) {
   switch (action.type) {
-    case 'SETTITLE':
-      return { title: action.title }
+    case 'changecolor':
+      return { bgcolor: action.bgcolor }
     default:
       return state
   }
@@ -12,7 +12,7 @@ function changer(state = {title:'榜单 ? 电影 ? 豆瓣'}, action) {
 // 将 Redux state 转化成 组件的 props
 function mapStateToProps(state) {
   return {
-    value: state.title
+    bgcolor: state.bgcolor
   }
 }
 

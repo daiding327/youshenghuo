@@ -27,13 +27,16 @@ import Jiadian from './component/categery.js'
 import Xiang from './component/xiang.js'
 
 import Login from './component/login.js'
+import { Provider } from 'react-redux'
+import { store } from './redux/store'
 
 ReactDOM.render(
+<Provider store={store}>
 		<Router history={hashHistory}>
 			<Route path="/" component={Index}>
-				<IndexRedirect to="/home"></IndexRedirect>
-				<Route path="home" component={Home}></Route>
-				<Route path="kind" component={Kind}>
+				<IndexRedirect to="/home"  bgcolor="rgba(0,0,0,0.3)"></IndexRedirect>
+				<Route path="home"  bgcolor="rgba(0,0,0,0.3)" component={Home}></Route>
+				<Route path="kind" bgcolor="rgba(255,92,80,1)" component={Kind}>
 					<IndexRedirect to="one"></IndexRedirect>
 					<Route path="one" component={One}></Route>
 					<Route path="two" component={Two}></Route>
@@ -62,7 +65,8 @@ ReactDOM.render(
 			<Route path="jiadian" component={Jiadian}></Route>
 			<Route path="supermarket" component={Supermarket}></Route>
 			<Route path="xiang" component={Xiang}></Route>
-		</Router>,
+		</Router>
+		</Provider>,
 
 	document.getElementById('root')
 )
