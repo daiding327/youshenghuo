@@ -27,7 +27,6 @@ import Jiadian from './component/categery.js'
 import Xiang from './component/xiang.js'
 
 import Login from './component/login.js'
-//import Register from './component/register.js'
 
 ReactDOM.render(
 		<Router history={hashHistory}>
@@ -44,7 +43,6 @@ ReactDOM.render(
 					<Route path="six" component={Six}></Route>
 				</Route>
 				<Route path="cart" component={Cart}></Route>
-
 				<Route path="kindindex" component={Kindindex}>
 					<IndexRedirect to="moren"></IndexRedirect>
 					<Route path="moren" component={Moren}></Route>

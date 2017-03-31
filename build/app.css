@@ -3549,6 +3549,10 @@ a {
   font-family: yofont;
   src: url(/iconfont/iconfont11.woff) format("woff"), url(/iconfont/iconfont11.ttf) format("truetype"); }
 
+@font-face {
+  font-family: yofont;
+  src: url(/iconfont/iconfont12.woff) format("woff"), url(/iconfont/iconfont12.ttf) format("truetype"); }
+
 body {
   position: relative; }
 
@@ -4190,61 +4194,6 @@ body {
           font-size: 0.12rem;
           color: red; }
 
-<<<<<<< HEAD
-.m-my {
-  padding-top: 0.44rem;
-  background: #f7f7f7;
-  height: 100%;
-  width: 100%; }
-  .m-my .user {
-    width: 100%;
-    height: 1.5rem;
-    background: #ff4857;
-    position: relative; }
-    .m-my .user .h {
-      width: 0.52rem;
-      height: 0.53rem;
-      background: #80373d;
-      opacity: 0.6;
-      position: absolute;
-      top: 30%;
-      left: 40%;
-      border-radius: 0.05rem; }
-      .m-my .user .h .yo-ico {
-        color: #fff;
-        position: absolute;
-        top: 20%;
-        left: 35%;
-        font-size: 0.16rem; }
-  .m-my .box {
-    width: 100%;
-    height: 1.5rem;
-    background: #fff; }
-    .m-my .box .box1 {
-      border: none;
-      margin-left: 0.2rem;
-      border-bottom: 1px solid #e5e5e5;
-      margin-top: 0.2rem; }
-    .m-my .box .a {
-      display: inline-block;
-      margin-left: 0.2rem; }
-    .m-my .box .box2 {
-      border: none;
-      margin-left: 0.2rem;
-      border-bottom: 1px solid #e5e5e5; }
-    .m-my .box .b {
-      display: inline-block;
-      margin-left: 0.2rem; }
-    .m-my .box .input {
-      text-align: center; }
-    .m-my .box .input span {
-      display: inline-block;
-      width: 0.5rem;
-      background: #ff4857;
-      margin: 0.3rem;
-      color: #fff;
-      border-radius: 0.1rem; }
-=======
 footer {
   width: 100%;
   height: 0.51rem;
@@ -4321,6 +4270,114 @@ footer {
         footer ul li a.active {
           opacity: 1;
           color: #ff5c50; }
+
+.m-my {
+  padding-top: 0.44rem;
+  background: #f7f7f7;
+  height: 100%;
+  width: 100%; }
+  .m-my .user {
+    width: 100%;
+    height: 1.5rem;
+    background: #ff4857;
+    position: relative; }
+    .m-my .user .h {
+      width: 0.52rem;
+      height: 0.53rem;
+      background: #80373d;
+      opacity: 0.6;
+      position: absolute;
+      top: 30%;
+      left: 40%;
+      border-radius: 0.05rem; }
+      .m-my .user .h .yo-ico {
+        color: #fff;
+        position: absolute;
+        top: 20%;
+        left: 35%;
+        font-size: 0.16rem; }
+  .m-my .box-register-box {
+    width: 100%;
+    height: 1.5rem;
+    background: #fff; }
+  .m-my .a {
+    display: inline-block;
+    margin-left: 0.2rem; }
+  .m-my .boxa {
+    border: none;
+    margin-left: 0.2rem;
+    margin-top: 0.2rem; }
+  .m-my .b {
+    display: inline-block;
+    margin-left: 0.2rem; }
+  .m-my .boxb {
+    border: none;
+    margin-left: 0.2rem;
+    margin-top: 0.2rem; }
+  .m-my .register-register {
+    width: 2rem;
+    height: 0.3rem;
+    background: #ff4857;
+    border: none;
+    border-radius: 0.1rem;
+    margin-left: 0.5rem;
+    color: #fff;
+    margin-top: 0.2rem; }
+  .m-my .c {
+    width: 2rem;
+    height: 0.3rem;
+    background: #ff4857;
+    border: none;
+    border-radius: 0.1rem;
+    margin-left: 0.5rem;
+    color: #fff;
+    margin-top: 0.2rem;
+    display: inline-block;
+    text-align: center; }
+
+.login {
+  margin-top: 0.44rem;
+  width: 100%;
+  height: 100%; }
+
+.i {
+  width: 8rem;
+  height: 3rem; }
+
+.i img {
+  width: 100%;
+  height: 100%; }
+
+.box-login-box {
+  margin-top: 0.1rem; }
+
+.a {
+  display: inline-block;
+  margin-left: 0.2rem; }
+
+.boxa {
+  border: none;
+  margin-left: 0.2rem;
+  margin-top: 0.2rem; }
+
+.b {
+  display: inline-block;
+  margin-left: 0.2rem; }
+
+.boxb {
+  border: none;
+  margin-left: 0.24rem;
+  margin-top: 0.2rem; }
+
+.login-login {
+  width: 2rem;
+  height: 0.3rem;
+  background: #ff4857;
+  border: none;
+  border-radius: 0.1rem;
+  margin-left: 0.5rem;
+  color: #fff;
+  margin-top: 0.2rem; }
 
 body {
   position: relative; }
@@ -4492,32 +4549,144 @@ body {
 
 .m-xiang {
   width: 100%;
+  height: 100%;
   height: auto; }
   .m-xiang .yo-scroller {
     width: 100%;
     height: 5.17rem; }
-  .m-xiang header {
-    position: absolute;
-    top: 0;
-    left: 0;
+  .m-xiang .yo-carousel {
+    width: 100%;
+    height: 3.2rem; }
+  .m-xiang .xiang-title {
+    width: 100%;
+    height: 0.69rem;
+    padding-top: 0.13rem;
+    background: #fff;
+    padding-left: 0.15rem;
+    border-bottom: 0.01rem solid #d9dadc; }
+    .m-xiang .xiang-title p {
+      font-size: 0.16rem;
+      color: #000; }
+    .m-xiang .xiang-title span {
+      font-size: 0.16rem;
+      color: darkred; }
+  .m-xiang .xiang-caizhi {
+    width: 100%;
+    height: 0.51rem;
+    line-height: 0.51rem;
+    padding-left: 0.1rem;
+    border-bottom: 0.01rem solid #d9dadc;
+    background: #fff;
+    color: #999; }
+    .m-xiang .xiang-caizhi span {
+      width: 15%;
+      display: inline-block; }
+    .m-xiang .xiang-caizhi .cai {
+      color: #000;
+      width: 70%; }
+  .m-xiang .xiang-dizhi {
+    width: 100%;
+    height: 0.51rem;
+    line-height: 0.51rem;
+    padding-left: 0.1rem;
+    border-bottom: 0.01rem solid #d9dadc;
+    background: #fff;
+    color: #999; }
+    .m-xiang .xiang-dizhi span {
+      width: 15%;
+      display: inline-block; }
+    .m-xiang .xiang-dizhi .cai {
+      color: #000;
+      width: 70%; }
+    .m-xiang .xiang-dizhi i {
+      font-size: 0.2rem;
+      color: red; }
+  .m-xiang .xiang-fei {
+    width: 100%;
+    height: 0.51rem;
+    line-height: 0.51rem;
+    padding-left: 0.1rem;
+    border-bottom: 0.01rem solid #d9dadc;
+    margin-bottom: 0.15rem;
+    background: #fff;
+    color: #999; }
+    .m-xiang .xiang-fei span {
+      width: 15%;
+      display: inline-block; }
+    .m-xiang .xiang-fei .cai {
+      color: #000;
+      width: 70%; }
+    .m-xiang .xiang-fei .bao {
+      display: inline-block;
+      border-radius: 50%;
+      background: red;
+      color: #fff;
+      text-align: center;
+      height: 0.3rem;
+      line-height: 0.3rem; }
+  .m-xiang .xiang-pingjia {
+    width: 100%;
+    height: 0.51rem;
+    line-height: 0.51rem;
+    padding-left: 0.1rem;
+    border-bottom: 0.01rem solid #d9dadc;
+    background: #fff;
+    color: #999; }
+    .m-xiang .xiang-pingjia span {
+      width: 20%;
+      display: inline-block; }
+    .m-xiang .xiang-pingjia .cai {
+      color: #000;
+      width: 80%;
+      padding-right: 0.2rem;
+      text-align: right; }
+    .m-xiang .xiang-pingjia i {
+      font-size: 0.15rem; }
+  .m-xiang .xiang-wu {
+    width: 100%;
+    height: 0.51rem;
+    line-height: 0.51rem;
+    padding-left: 0.1rem;
+    border-bottom: 0.01rem solid #d9dadc;
+    background: #fff;
+    color: #000; }
+    .m-xiang .xiang-wu span {
+      width: 100%;
+      display: inline-block; }
+
+div.container {
+  width: 2.56rem;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background: #f7f7f7;
+  z-index: 10000; }
+  div.container .city-head {
     width: 100%;
     height: 0.5rem;
     line-height: 0.5rem;
-    background: rgba(255, 255, 255, 0.3);
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    z-index: 99;
-    text-align: center; }
-    .m-xiang header .info {
+    text-align: center;
+    background: #fff; }
+    div.container .city-head span {
+      display: inline-block;
       width: 70%;
-      height: 100%;
-      font-size: 0.25rem; }
-    .m-xiang header .font {
-      width: 15%;
-      height: 100%;
-      color: #fff;
-      font-size: 0.3rem; }
+      font-size: 0.2rem; }
+    div.container .city-head .qu {
+      width: 30%;
+      color: #999; }
+  div.container .yo-scroller {
+    width: 100%;
+    height: 5.18rem;
+    postion: absolute;
+    top: 0.5rem;
+    left: 0; }
+  div.container .cityitem {
+    width: 100%;
+    height: 0.5rem;
+    border-bottom: 1px solid #ececec;
+    list-style: none;
+    line-height: 0.5rem;
+    padding-left: 0.3rem; }
 
 footer {
   width: 100%;
@@ -4526,7 +4695,8 @@ footer {
   position: relative;
   position: absolute;
   bottom: 0;
-  left: 0; }
+  left: 0;
+  overflow: hidden; }
   footer::after {
     pointer-events: none;
     position: absolute;
@@ -4615,4 +4785,28 @@ footer {
         footer ul li.lijigou b {
           color: #fff;
           font-size: 0.2rem; }
->>>>>>> master
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.3);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  z-index: 99;
+  text-align: center; }
+  header .info {
+    width: 70%;
+    height: 100%;
+    font-size: 0.25rem; }
+  header .font {
+    width: 15%;
+    height: 100%;
+    color: #fff;
+    line-height: 0.5rem;
+    font-size: 0.3rem; }
