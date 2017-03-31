@@ -3,36 +3,172 @@ body{
 }
 .m-xiang{
 	width:100%;
+	height:100%;
 	height:auto;
 	.yo-scroller{
 		width:100%;
 		height:5.17rem;
 	}
-	header{
-		position:absolute;
-		top:0;
-		left:0;
+	.yo-carousel{
 		width:100%;
-		height:0.5rem;
-		line-height:0.5rem;
-		background:rgba(255,255,255,0.3);
-		@include flexbox();
-		z-index:99;
-		text-align:center;
-		.info{
-			width:70%;
-			height:100%;
-			font-size:0.25rem;
+		height:3.2rem;
+	}
+	.xiang-title{
+		width:100%;
+		height:0.69rem;
+		padding-top:0.13rem;
+		background:#fff;
+		padding-left:0.15rem;
+		border-bottom:0.01rem solid #d9dadc;
+		p{
+			font-size:0.16rem;
+			color:#000;
 		}
-		.font{
+		span{
+			font-size:0.16rem;
+			color:darkred;
+		}
+	}
+	.xiang-caizhi{
+		width:100%;
+		height:0.51rem;
+		line-height:0.51rem;
+		padding-left:0.1rem;
+		border-bottom:0.01rem solid #d9dadc;
+		background:#fff;
+		color:#999;
+		span{
 			width:15%;
-			height:100%;
+			display:inline-block;
+		}
+		.cai{
+			color:#000;
+			width:70%;
+		}
+	}
+	.xiang-dizhi{
+		width:100%;
+		height:0.51rem;
+		line-height:0.51rem;
+		padding-left:0.1rem;
+		border-bottom:0.01rem solid #d9dadc;
+		background:#fff;
+		color:#999;
+		span{
+			width:15%;
+			display:inline-block;
+		}
+		.cai{
+			color:#000;
+			width:70%;
+		}
+		i{
+			font-size:0.2rem;
+			color:red;
+		}
+	}
+	.xiang-fei{
+		width:100%;
+		height:0.51rem;
+		line-height:0.51rem;
+		padding-left:0.1rem;
+		border-bottom:0.01rem solid #d9dadc;
+		margin-bottom:0.15rem;
+		background:#fff;
+		color:#999;
+		span{
+			width:15%;
+			display:inline-block;
+		}
+		.cai{
+			color:#000;
+			width:70%;
+		}
+		.bao{
+			display:inline-block;
+			border-radius:50%;
+			background:red;
 			color:#fff;
-			font-size:0.3rem;
+			text-align:center;
+			height:0.3rem;
+			line-height:0.3rem;
+		}
+	}
+	.xiang-pingjia{
+		width:100%;
+		height:0.51rem;
+		line-height:0.51rem;
+		padding-left:0.1rem;
+		border-bottom:0.01rem solid #d9dadc;
+		background:#fff;
+		color:#999;
+		span{
+			width:20%;
+			display:inline-block;
+		}
+		.cai{
+			color:#000;
+			width:80%;
+			padding-right:0.2rem;
+			text-align:right;
+		}
+		i{
+			font-size:0.15rem;
+		}
+	}
+	.xiang-wu{
+		width:100%;
+		height:0.51rem;
+		line-height:0.51rem;
+		padding-left:0.1rem;
+		border-bottom:0.01rem solid #d9dadc;
+		background:#fff;
+		color:#000;
+		span{
+			width:100%;
+			display:inline-block;
 		}
 	}
 }
-
+div.container{
+	width:2.56rem;
+	height:100%;
+	position:absolute;
+	right:0;
+	background:#f7f7f7;
+	z-index:10000;
+	.city-head{
+		width:100%;
+		height:0.5rem;
+		line-height:0.5rem;
+		text-align:center;
+		background:#fff;
+		span{
+			display:inline-block;
+			width:70%;
+			font-size:0.2rem;
+		}
+		.qu{
+			width:30%;
+			color:#999;
+		}
+	}
+	.yo-scroller{
+		width:100%;
+		height:5.18rem;
+		postion:absolute;
+		top:0.5rem;
+		left:0;
+	}
+	.cityitem{
+		width:100%;
+		height:0.5rem;
+		border-bottom:1px solid #ececec;
+		list-style:none;
+		line-height:0.5rem;
+		padding-left:0.3rem;
+	}
+}
 footer{
 	width:100%;
 	height:0.51rem;
@@ -41,6 +177,7 @@ footer{
 	position:absolute;
 	bottom:0;
 	left:0;
+	overflow:hidden;
 	ul{
 		width:100%;
 		height:100%;
@@ -93,7 +230,31 @@ footer{
 	}
 }
 
-
+header{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:0.5rem;
+		line-height:0.5rem;
+		overflow:hidden;
+		background:rgba(255,255,255,0.3);
+		@include flexbox();
+		z-index:99;
+		text-align:center;
+		.info{
+			width:70%;
+			height:100%;
+			font-size:0.25rem;
+		}
+		.font{
+			width:15%;
+			height:100%;
+			color:#fff;
+			line-height:0.5rem;
+			font-size:0.3rem;
+		}
+	}
 
 
 

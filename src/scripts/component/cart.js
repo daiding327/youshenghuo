@@ -9,6 +9,7 @@ class Cart extends React.Component {
   render() {
 	return (
 		<div className="m-cart">
+
 			<h2>我的购物车</h2>
 			<div className="tishi">
 				<button onClick={this.tiaozhuan}>登 录</button>
@@ -21,6 +22,9 @@ class Cart extends React.Component {
 					<button>去逛逛</button>
 				</Link>
 			</div>	
+
+			
+
 		</div>
 	)	
   }

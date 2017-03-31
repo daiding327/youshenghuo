@@ -9,7 +9,7 @@
 					height: 112px;
 					@include flexbox();
 					@include flex-direction();
-
+					color:#333;
 					img{
 						width:112px;
 						height:112px;
