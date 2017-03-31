@@ -18,6 +18,9 @@ import Six from './component/six.js'
 
 import Kindindex from './component/kindindex.js'
 import Moren from './component/moren.js'
+import Sales from './component/sales.js'
+import Jiage from './component/jiage.js'
+import Random from './component/random.js'
 
 import Supermarket from './component/supermarket.js'
 import Lunone from './component/lunone.js'
@@ -39,18 +42,23 @@ ReactDOM.render(
 				<Route path="six" component={Six}></Route>
 			</Route>
 			<Route path="cart" component={Cart}></Route>
-			<Route path="supermarket" component={Supermarket}></Route>
+			
 			<Route path="my" component={My}></Route>
 
 			<Route path="kindindex" component={Kindindex}>
+				<IndexRedirect to="moren"></IndexRedirect>
 				<Route path="moren" component={Moren}></Route>
+				<Route path="sales" component={Sales}></Route>
+				<Route path="jiage" component={Jiage}></Route>
+				<Route path="random" component={Random}></Route>
 			</Route>
 
-			<Route path="lunone" component={Lunone}></Route>
-			<Route path="jiadian" component={Jiadian}></Route>
+			
 
 		</Route>
-		
+		<Route path="lunone" component={Lunone}></Route>
+		<Route path="jiadian" component={Jiadian}></Route>
+		<Route path="supermarket" component={Supermarket}></Route>
 	</Router>,
 	document.getElementById('root')
 )
