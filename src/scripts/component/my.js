@@ -11,9 +11,12 @@ import {
 class My extends React.Component {
   constructor (props) {
     super(props)
+	this.disappear=this.disappear.bind(this)
      this.state = {
       title: '榜单',
-	  flag:true
+	  flag:true,
+	  appear:false,
+	  userID:"请登录"
     }
     this.register = this.register.bind(this);
     this.state = {
@@ -25,7 +28,27 @@ class My extends React.Component {
 			this.exit = this.exit.bind(this)
 
   }
-
+  disappear () {
+	  localStorage.clear()
+	  this.setState({
+			  appear:false,
+			  userID:"请登录"
+	})
+  }
+  componentWillMount () {
+	  var userID=localStorage.userID;
+	  if(userID){
+		  this.setState({
+			  appear:true,
+			  userID:userID
+		  })
+	  }else{
+		  this.setState({
+			  appear:false
+		  })
+	  }
+	  
+  }
   register() {
 		var userID = this.refs.userID.value;
 		//console.log(userID)
@@ -33,6 +56,7 @@ class My extends React.Component {
 
 		if (!(/^1[34578]\d{9}$/.test(userID))) {
 			alert("请输入正确手机号码")
+			//写模态框
 		} else {
 			var url = "http://datainfo.duapp.com/shopdata/userinfo.php?status=register&userID=" + userID + "&password=" + password;
 			fetch(url)
@@ -41,6 +65,7 @@ class My extends React.Component {
 					console.log(response)
 					if (response == 1) {
 						alert("注册成功!即将跳转到登入页面!");
+						//写模态框
 						//window.location.href = "#/home"
 						window.location.href = "#/login"
 
@@ -98,7 +123,7 @@ class My extends React.Component {
 				</Link>
 			</div>
 		</header>
-
+        <div className="container2">
 				  <div className="user">
 		              <div className="h">
 		                <i className="yo-ico">&#xe629;</i>
@@ -106,7 +131,7 @@ class My extends React.Component {
 				   </div>
 
                 
-                 <div className="box-register-box">
+                 <div className="box-register-box" style={{display:this.state.appear==false?'block':'none'}}>
 			
 				<div className="register-txt box-register"><span className="a">用户名:</span><input type="text" className="boxa" ref="userID" placeholder="手机号码"/></div>
 
@@ -116,14 +141,15 @@ class My extends React.Component {
 
 			    </div>
             
-				            <div className="input">
+				            <div className="input"  style={{display:this.state.appear==false?'block':'none'}}>
 		        				<Link to="/login" className="login"><span className="c">登录</span></Link>
 		        				
 		        
 		                    </div>
   			
-              
-
+              <div className="shang" style={{display:this.state.appear==false?'none':'block'}}>欢迎您！{this.state.userID}</div>
+			  <div className="quit" onClick={this.disappear} style={{display:this.state.appear==false?'none':'block'}}>退出登录</div>
+		</div>
        <footer>
 			<ul>
 				<li>

@@ -11,6 +11,7 @@ class Xiang extends React.Component {
 	this.tui=this.tui.bind(this)
 	this.tiao=this.tiao.bind(this)
 	this.changecolor=this.changecolor.bind(this)
+	this.jia=this.jia.bind(this)
 	this.state={
 		list:[<div/>],
 		item:{
@@ -25,6 +26,21 @@ class Xiang extends React.Component {
 		city:[<div/>],
 		title:"江苏苏州市昆山市"
 	} 
+  }
+  jia () {
+	  
+	   var userID=localStorage.userID;
+	   if(userID){
+		   var url="http://datainfo.duapp.com/shopdata/updatecar.php?userID=userID&goodsID=12&number=1";
+		  fetch(url)
+		  .then(response=>response.json())
+			.then(res=>{
+				console.log(res);
+			})
+	   }else{
+		   window.location.href="#/my"
+	   }
+	  
   }
   change () {
 	  this.setState({
@@ -104,7 +120,7 @@ class Xiang extends React.Component {
 							<b>收藏</b>
 						</Link>
 					</li>
-					<li className="jiarugou">
+					<li className="jiarugou" onClick={this.jia}>
 						<Link to="" activeClassName="active">
 							<b>加入购物车</b>
 						</Link>

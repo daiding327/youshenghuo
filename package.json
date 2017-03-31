@@ -19,6 +19,7 @@
     "classnames": "^2.2.5",
     "css-loader": "^0.26.4",
     "extract-text-webpack-plugin": "^2.1.0",
+    "fetch-jsonp": "^1.0.6",
     "file-loader": "^0.10.1",
     "has-flag": "^2.0.0",
     "html-webpack-plugin": "^2.28.0",

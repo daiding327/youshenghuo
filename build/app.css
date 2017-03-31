@@ -3535,35 +3535,24 @@ a {
 
 @font-face {
   font-family: yofont;
-<<<<<<< HEAD
-=======
-  src: url(/iconfont/iconfont9.woff) format("woff"), url(/iconfont/iconfont9.ttf) format("truetype"); }
-
-@font-face {
-  font-family: yofont;
->>>>>>> master
   src: url(/iconfont/iconfont7.woff) format("woff"), url(/iconfont/iconfont7.ttf) format("truetype"); }
 
 @font-face {
   font-family: yofont;
-<<<<<<< HEAD
   src: url(/iconfont/iconfont9.woff) format("woff"), url(/iconfont/iconfont9.ttf) format("truetype"); }
 
-=======
+@font-face {
+  font-family: yofont;
   src: url(/iconfont/iconfont10.woff) format("woff"), url(/iconfont/iconfont10.ttf) format("truetype"); }
 
 @font-face {
   font-family: yofont;
   src: url(/iconfont/iconfont11.woff) format("woff"), url(/iconfont/iconfont11.ttf) format("truetype"); }
 
-<<<<<<< HEAD
->>>>>>> master
-=======
 @font-face {
   font-family: yofont;
   src: url(/iconfont/iconfont12.woff) format("woff"), url(/iconfont/iconfont12.ttf) format("truetype"); }
 
->>>>>>> master
 body {
   position: relative; }
 
@@ -3829,7 +3818,8 @@ section {
         border-right: 1px #ececec solid; }
     .m-kind .kindlist div {
       height: 315px;
-      width: 100%; }
+      width: 100%;
+      padding-top: 0; }
       .m-kind .kindlist div ul {
         width: 100%;
         background: #fff;
@@ -3867,9 +3857,11 @@ section {
 .m-kindindex {
   margin-top: 44px;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  padding-top: 44px; }
   .m-kindindex #ul {
     position: fixed;
+    z-index: 999;
     top: 44px;
     left: 0px;
     height: 45px;
@@ -3916,41 +3908,40 @@ section {
       left: 0px;
       top: 10px; }
 
-.box {
+.box .yo-scroller {
   width: 100%;
-  height: 100%;
-  padding-top: 45px;
-  overflow: hidden; }
-  .box .small {
+  height: 5.17rem; }
+  .box .yo-scroller .small a {
     width: 100%;
-    height: 100%;
+    height: 112px;
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
-    flex-direction: row; }
-    .box .small img {
+    flex-direction: row;
+    color: #333; }
+    .box .yo-scroller .small a img {
       width: 112px;
       height: 112px;
       background: yellow; }
-    .box .small p {
+    .box .yo-scroller .small a p {
       -webkit-box-flex: 1;
       -webkit-flex: 1;
       flex: 1;
       width: .1px;
       padding: 20px 0 20px 11px;
       border-bottom: #ececec 1px solid; }
-      .box .small p h3 {
+      .box .yo-scroller .small a p h3 {
         width: 194px;
         height: 40px;
         font-weight: 100; }
-      .box .small p span {
+      .box .yo-scroller .small a p span {
         display: inline-block;
         margin-top: 5px;
         color: #d50000; }
-        .box .small p span span {
+        .box .yo-scroller .small a p span span {
           color: #999;
           font-size: 12px;
           padding-left: 50px; }
@@ -4284,6 +4275,13 @@ footer {
 
 .m-my {
   padding-top: 0.44rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
   background: #f7f7f7;
   height: 100%;
   width: 100%; }
@@ -4307,6 +4305,29 @@ footer {
         top: 20%;
         left: 35%;
         font-size: 0.16rem; }
+  .m-my div.container2 {
+    width: 100%;
+    position: relative;
+    flex: 1;
+    overflow-y: auto; }
+    .m-my div.container2 .shang {
+      width: 100%;
+      height: 0.4rem;
+      text-align: center;
+      line-height: 0.4rem; }
+    .m-my div.container2 .quit {
+      width: 2.56rem;
+      height: 0.4rem;
+      line-height: 0.4rem;
+      background: #ff4857;
+      border-radius: 0.05rem;
+      color: #fff;
+      text-align: center;
+      font-size: 0.2rem;
+      position: absolute;
+      left: 50%;
+      margin-left: -1.28rem;
+      margin-top: 0.3rem; }
   .m-my .box-register-box {
     width: 100%;
     height: 1.5rem;
@@ -4345,11 +4366,156 @@ footer {
     margin-top: 0.2rem;
     display: inline-block;
     text-align: center; }
+  .m-my header {
+    height: 0.44rem;
+    background: rgba(0, 0, 0, 0.3);
+    line-height: 0.44rem;
+    z-index: 99;
+    color: #fff;
+    width: 100%; }
+    .m-my header a {
+      color: #fff; }
+    .m-my header .u-header {
+      width: 100%;
+      height: 100%; }
+      .m-my header .u-header div {
+        width: 70%;
+        display: inline-block;
+        background: #fff;
+        height: 0.3rem;
+        line-height: 0.3rem;
+        border-radius: 0.08rem; }
+        .m-my header .u-header div i {
+          width: 10%;
+          font-size: 0.16rem;
+          display: inline-block;
+          color: #000; }
+        .m-my header .u-header div input {
+          width: 80%;
+          height: 100%;
+          border: none;
+          padding-left: 0.05rem; }
+      .m-my header .u-header i {
+        font-size: 0.25rem;
+        text-align: center;
+        width: 15%;
+        display: inline-block;
+        padding: 0 0.08rem; }
+  .m-my footer {
+    height: 0.51rem;
+    background: #fff;
+    position: relative; }
+    .m-my footer::after {
+      pointer-events: none;
+      position: absolute;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      content: " ";
+      border-color: gray;
+      border-style: solid;
+      border-width: 1px 0 0 0;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0; }
+      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {
+        .m-my footer::after {
+          width: 100%;
+          height: 100%; } }
+      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {
+        .m-my footer::after {
+          width: 200%;
+          height: 200%;
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5); } }
+      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {
+        .m-my footer::after {
+          width: 300%;
+          height: 300%;
+          -webkit-transform: scale(0.33333);
+          transform: scale(0.33333); } }
+    .m-my footer ul {
+      width: 100%;
+      height: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      justify-content: between; }
+      .m-my footer ul li {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        width: .1px; }
+        .m-my footer ul li a {
+          height: 100%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          color: #000;
+          opacity: 0.8; }
+          .m-my footer ul li a b {
+            font-weight: normal;
+            font-size: 0.12rem; }
+          .m-my footer ul li a i {
+            font-size: 0.25rem;
+            width: 0.25rem;
+            height: 0.3rem; }
+          .m-my footer ul li a.active {
+            opacity: 1;
+            color: #ff5c50; }
 
 .login {
-  margin-top: 0.44rem;
   width: 100%;
   height: 100%; }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0.44rem;
+  background: rgba(0, 0, 0, 0.3);
+  line-height: 0.44rem;
+  z-index: 99;
+  color: #fff;
+  width: 100%; }
+  header a {
+    color: #fff; }
+  header .u-header {
+    width: 100%;
+    height: 100%; }
+    header .u-header div {
+      width: 70%;
+      display: inline-block;
+      background: #fff;
+      height: 0.3rem;
+      line-height: 0.3rem;
+      border-radius: 0.08rem; }
+      header .u-header div i {
+        width: 10%;
+        font-size: 0.16rem;
+        display: inline-block;
+        color: #000; }
+      header .u-header div input {
+        width: 80%;
+        height: 100%;
+        border: none;
+        padding-left: 0.05rem; }
+    header .u-header i {
+      font-size: 0.25rem;
+      text-align: center;
+      width: 15%;
+      display: inline-block;
+      padding: 0 0.08rem; }
 
 .i {
   width: 8rem;
@@ -4554,8 +4720,6 @@ footer {
         footer ul li a.active {
           opacity: 1;
           color: #ff5c50; }
-<<<<<<< HEAD
-=======
 
 body {
   position: relative; }
@@ -4798,9 +4962,6 @@ footer {
         footer ul li.lijigou b {
           color: #fff;
           font-size: 0.2rem; }
-<<<<<<< HEAD
->>>>>>> master
-=======
 
 header {
   position: absolute;
@@ -4826,4 +4987,147 @@ header {
     color: #fff;
     line-height: 0.5rem;
     font-size: 0.3rem; }
->>>>>>> master
+
+body {
+  position: relative; }
+
+.m-cart {
+  width: 100%;
+  height: 100%;
+  padding-top: .45rem; }
+  .m-cart .cart-head {
+    width: 100%;
+    height: 0.44rem;
+    line-height: 0.44rem;
+    padding-left: 0.2rem;
+    font-size: 0.25rem;
+    background: #efefef; }
+  .m-cart .jiesuan {
+    position: absolute;
+    bottom: 0.51rem;
+    width: 100%;
+    height: 0.6rem;
+    border: 1px solid gray;
+    border-bottom: none;
+    display: flex; }
+    .m-cart .jiesuan .jie-jia {
+      flex: 2;
+      padding-left: 0.4rem;
+      text-align: left; }
+      .m-cart .jiesuan .jie-jia span {
+        color: red; }
+    .m-cart .jiesuan .jie-tiao {
+      flex: 1;
+      background: red;
+      height: 100%;
+      text-align: center;
+      color: #fff;
+      font-size: 0.25rem;
+      line-height: 0.6rem; }
+  .m-cart .goods-item {
+    width: 100%;
+    border: 0.01rem solid gray;
+    height: 1.05rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex; }
+    .m-cart .goods-item img {
+      width: 1rem;
+      height: 1rem; }
+    .m-cart .goods-item div {
+      padding-left: 0.2rem;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center; }
+      .m-cart .goods-item div P {
+        margin-bottom: 0.2rem; }
+      .m-cart .goods-item div .jiage {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        padding: 0;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        flex-direction: row; }
+        .m-cart .goods-item div .jiage span {
+          color: red;
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+          flex: 1;
+          width: .1px;
+          text-align: left; }
+        .m-cart .goods-item div .jiage div {
+          -webkit-box-flex: 2;
+          -webkit-flex: 2;
+          flex: 2;
+          width: .1px;
+          display: flex;
+          text-align: center;
+          flex-direction: row;
+          text-align: center; }
+          .m-cart .goods-item div .jiage div span {
+            display: inline-block;
+            background: #efefef;
+            text-align: center;
+            color: #000; }
+          .m-cart .goods-item div .jiage div input {
+            width: 0.3rem;
+            padding-left: 0.07rem; }
+  .m-cart h2 {
+    background: #f7f7f7;
+    height: 0.5rem;
+    width: 100%;
+    padding-left: .3rem;
+    line-height: .5rem;
+    font-size: 1.3em;
+    font-weight: 100;
+    color: #8f8f8f; }
+  .m-cart .tishi {
+    height: .87rem;
+    padding: .1rem .17rem;
+    line-height: .67rem; }
+    .m-cart .tishi button {
+      width: .7rem;
+      height: .3rem;
+      line-height: .22rem;
+      color: #ff3651;
+      border-radius: 4px;
+      border: 1px solid #ff3651;
+      background: #fff;
+      font-size: .14rem; }
+    .m-cart .tishi span {
+      padding-left: .13rem;
+      height: .3rem;
+      font-size: .14rem; }
+  .m-cart .center {
+    padding-top: .3rem;
+    width: 100%;
+    text-align: center;
+    height: 284px;
+    background: #f7f7f7; }
+    .m-cart .center img {
+      width: 1.6rem;
+      height: 1.6rem;
+      display: block;
+      margin: 0 auto; }
+    .m-cart .center h3 {
+      padding-top: .2rem;
+      letter-spacing: 1px;
+      font-size: .14rem;
+      font-weight: 100; }
+    .m-cart .center button {
+      width: 2.92rem;
+      height: .46rem;
+      background: #e63d59;
+      border-radius: 4px;
+      border: 1px solid #E63D59;
+      margin-top: .2rem;
+      color: white; }
