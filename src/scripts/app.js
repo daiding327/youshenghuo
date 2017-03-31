@@ -19,6 +19,8 @@ import Supermarket from './component/supermarket.js'
 import Lunone from './component/lunone.js'
 import Jiadian from './component/categery.js'
 
+import Login from './component/login.js'
+//import Register from './component/register.js'
 
 ReactDOM.render(
 	<Router history={hashHistory}>
@@ -35,11 +37,21 @@ ReactDOM.render(
 				<Route path="six" component={Six}></Route>
 			</Route>
 			<Route path="cart" component={Cart}></Route>
-			<Route path="supermarket" component={Supermarket}></Route>
+			
+
+
 			<Route path="my" component={My}></Route>
-			<Route path="lunone" component={Lunone}></Route>
-			<Route path="jiadian" component={Jiadian}></Route>
+			  <Route path="login" component={Login}>
+                <Route path="index" component={Index}></Route>
+			  </Route>  
+             
+			
+		    
+			
 		</Route>
+		<Route path="supermarket" component={Supermarket}></Route>
+		<Route path="lunone" component={Lunone}></Route>
+		<Route path="jiadian" component={Jiadian}></Route>
 		
 	</Router>,
 	document.getElementById('root')
