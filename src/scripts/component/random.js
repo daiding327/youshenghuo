@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router'
 import Scroller from '../../component_dev/scroller/src'
 import List from '../../component_dev/list/src'
 class Random extends React.Component {
@@ -59,11 +60,13 @@ class Random extends React.Component {
 				for(var i in add){
 					sale.push(
 						<div className="small">
+							<Link to="/xiang"  activeClassName="active">
 							<img src={add[i].img} alt=""/>
 							<p>
 								<h3>{add[i].title}</h3>
 								<span>￥{add[i].price}.00<span>{add[i].sales}人评价</span></span>
 							</p>
+							</Link>
 						</div>
 					)
 				}  

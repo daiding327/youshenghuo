@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router'
 import Scroller from '../../component_dev/scroller/src'
 import List from '../../component_dev/list/src'
 class Jiage extends React.Component {
@@ -68,11 +69,13 @@ class Jiage extends React.Component {
 				for(var i in ass){
 					aee.push(
 						<div className="small">
+							<Link to="/xiang"  activeClassName="active">
 							<img src={ass[i].img} alt=""/>
 							<p>
 								<h3>{ass[i].title}</h3>
 								<span>￥{ass[i].price}.00<span>{ass[i].sales}人评价</span></span>
 							</p>
+							</Link>
 						</div>
 					)
 				}  

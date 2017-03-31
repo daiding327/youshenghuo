@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router'
 import Scroller from '../../component_dev/scroller/src'
 import List from '../../component_dev/list/src'
 class Moren extends React.Component {
@@ -46,11 +47,13 @@ class Moren extends React.Component {
 			for(var k in res.guo){
 				arr.push(
 						<div className="small">
+							<Link to="/xiang"  activeClassName="active">
 							<img src={res.guo[k].img} alt=""/>
 							<p>
 								<h3>{res.guo[k].title}</h3>
 								<span>￥{res.guo[k].price}.00<span>{res.guo[k].sales}人评价</span></span>
 							</p>
+							</Link>
 						</div>
 					)
 			}

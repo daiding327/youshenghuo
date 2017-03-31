@@ -69,7 +69,7 @@ class Sales extends React.Component {
 				for(var i=0;i<10;i++){
 					sale.push(
 						<div className="small">
-							<Link to="/home"  activeClassName="active">
+							<Link to="/xiang"  activeClassName="active">
 								<img src={add[i].img} alt=""/>
 								<p>
 									

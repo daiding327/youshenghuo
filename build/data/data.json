@@ -147,8 +147,29 @@
 			"title":"HAPPYCALL 耐酸不粘汤锅24cm",
 			"price":"￥655.00"
 		}
+	},	
+	"superhappycall":{
+		"1":{
+			"img":"images/1459694710021.jpg",
+			"title":"光明5800吹风机",
+			"price":"￥110.00"
+		},
+		"2":{
+			"img":"images/1459598658086.jpg",
+			"title":"飞科剃须刀Fs876",
+			"price":"￥115.00"
+		},
+		"3":{
+			"img":"images/1469067952254.jpg",
+			"title":"朗威Rs862剃须刀(以实物为准)",
+			"price":"￥99.00"
+		}
 	},
-
+	"xiang":{
+		"1":"images/1479202165528.jpg",
+		"2":"images/1479202167791.jpg",
+		"3":"images/1479202169930.jpg"
+	},
 	"guo":{
 		"1":{
 			"img":"images/1445178649730.jpg",
@@ -270,146 +291,7 @@
 			"price":"179",
 			"sales":"219"
 		}	
-	},	
-	"superhappycall":{
-		"1":{
-			"img":"images/1459694710021.jpg",
-			"title":"光明5800吹风机",
-			"price":"￥110.00"
-		},
-		"2":{
-			"img":"images/1459598658086.jpg",
-			"title":"飞科剃须刀Fs876",
-			"price":"￥115.00"
-		},
-		"3":{
-			"img":"images/1469067952254.jpg",
-			"title":"朗威Rs862剃须刀(以实物为准)",
-			"price":"￥99.00"
-		}
-	},
-	"guo1":{
-		"1":{
-			"img":"images/1445178649730.jpg",
-			"title":"安在 爱家锅具两件套  汤锅+炒锅",
-			"price":"199",
-			"sales":"58"
-		},
-		"2":{
-			"img":"images/1445179132848.jpg",
-			"title":"安在 珐琅瓷多用锅",
-			"price":"139",
-			"sales":"111"
-		},
-		"3":{
-			"img":"images/1445327922969.jpg",
-			"title":"伯尔尼斯单柄明珠锅 18cm",
-			"price":"60",
-			"sales":"123"
-		},
-		"4":{
-			"img":"images/1445913351421.jpg",
-			"title":"乐扣乐扣 锅具两件套 炒锅 汤锅",
-			"price":"399",
-			"sales":"453"
-		},
-		"5":{
-			"img":"images/1446169895334.jpg",
-			"title":"乐扣乐扣 汤锅 保温杯组合装",
-			"price":"199",
-			"sales":"122"
-		},
-		"6":{
-			"img":"images/1446529112043.jpg",
-			"title":"乐扣乐扣汤锅+340ml保温杯组合装",
-			"price":"24",
-			"sales":"11"
-		},
-		"7":{
-			"img":"images/1479280295403.jpg",
-			"title":"伯尔尼斯臻尚节能锅(五件套304不锈钢)",
-			"price":"399",
-			"sales":"124"
-		},
-		"8":{
-			"img":"images/1458379691959.jpg",
-			"title":"新榜样别具匠心炒锅(32cm)",
-			"price":"399",
-			"sales":"546"
-		},
-		"9":{
-			"img":"images/1479196705948.jpg",
-			"title":"伯尔尼斯臻尚韩式汤蒸锅",
-			"price":"85",
-			"sales":"942"
-		},
-		"10":{
-			"img":"images/1480044381481.jpg",
-			"title":"伯尔尼斯双柄明珠锅",
-			"price":"805",
-			"sales":"235"
-		},
-		"11":{
-			"img":"images/1459226507651.jpg",
-			"title":"HAPPYCALL  多用途双面气压锅",
-			"price":"870",
-			"sales":"598"
-		},
-		"12":{
-			"img":"images/1459235654212.jpg",
-			"title":"HAPPYCALL  钻石JUMBO双面锅(烧烤棱）",
-			"price":"998",
-			"sales":"12"
-		},
-		"13":{
-			"img":"images/1459238397790.jpg",
-			"title":"HAPPYCALL  耐酸不粘汤锅20cm",
-			"price":"565",
-			"sales":"518"
-		},
-		"14":{
-			"img":"images/1459237982211.jpg",
-			"title":"HAPPYCALL  耐酸不粘汤锅 28cm",
-			"price":"55",
-			"sales":"258"
-		},
-		"15":{
-			"img":"images/1459226507651.jpg",
-			"title":"HAPPYCALL  IH真空压力不粘汤锅20cm",
-			"price":"1580",
-			"sales":"538"
-		},
-		"16":{
-			"img":"images/1489226849235.jpg",
-			"title":"CHEFWAY诺贝系列 不锈钢汤锅 （NOBLE系列）KCNP2012",
-			"price":"568",
-			"sales":"558"
-		},
-		"17":{
-			"img":"images/1480044381481.jpg",
-			"title":"CHEFWAY诺贝系列 不锈钢汤锅 （NOBLE系列）KCNP2012",
-			"price":"565",
-			"sales":"51"
-		},
-		"18":{
-			"img":"images/1489225571849.jpg",
-			"title":"HAPPYCALL钻石不粘平底锅3001-0030",
-			"price":"669",
-			"sales":"511"
-		},
-		"19":{
-			"img":"images/1489215910458.jpg",
-			"title":"伯尔尼斯BERNESE欧式炒锅BENS-73",
-			"price":"599",
-			"sales":"768"
-		},
-		"20":{
-			"img":"images/1479879558846.jpg",
-			"title":"edei宜阁不锈钢胆调温分体电火锅（4.0L）XC4013A",
-			"price":"179",
-			"sales":"219"
-		}	
-	}	
+	}
 }
 
 

@@ -2,7 +2,6 @@ import React from 'react'
 import {Link} from 'react-router'
 
 
-
 class Index extends React.Component {
   constructor (props) {
     super(props)
@@ -78,7 +77,6 @@ class Index extends React.Component {
 				
 			</ul>
 		</footer>
-		
 	  </div>
     )
   }
@@ -88,6 +86,9 @@ class Index extends React.Component {
   }
   
 }
+
+
+
 
 
 export default Index
