@@ -24,23 +24,6 @@ class Kindindex extends React.Component {
 				<Scroller
 					scrollY={true}
 					className="flex"
-					ref="scroller"
-					usePullRefresh={true}
-					onRefresh={() => {
-						// 刷新数据 start
-						// ...
-						// 刷新数据 end
-
-						this.refs.scroller.stopRefreshing(true); // 这个调用也可以放在异步操作的回调里之后
-					}}
-					useLoadMore={true}
-					onLoad={() => {
-						// 加载数据 start
-						// ...
-						// 加载数据 end
-
-						this.refs.scroller.stopLoading(true); // 这个调用也可以放在异步操作的回调里之后
-					}}
 				>
 					{this.props.children}
 				</Scroller>			
