@@ -1,9 +1,11 @@
-
+section{
+	background:#fff;
+}
 
 .m-kind{
 	height:100%;
 	width:100%;
-	padding-top:0.44rem;
+	padding-top:44px;
 	.kindlist{
 		@include flexbox();
 		@include flex-direction();
@@ -13,11 +15,13 @@
 			width:85px;
 			height:500px;
 			background: #fff;
+			border-right:1px #ececec solid;
 			.active{
 				li{
 					background: #fff;
 					border-right:1px transparent solid;
 					width: 85px;
+					color:#e63d59;
 				}
 			}
 			li{

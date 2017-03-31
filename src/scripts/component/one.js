@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Link} from 'react-router';
 class One extends React.Component {
   constructor (props) {
     super(props)
@@ -10,6 +10,10 @@ class One extends React.Component {
 	return (
 		<div className="m-my">
 			<ul>
+						<Link to="/kindindex" ref="kindindex" activeClassName="active">
+							<li><a href=""><b>烹饪厨具</b><i className="yo-ico">&#xf0343;</i></a></li>
+						</Link>
+
 				<li><a href=""><b>烹饪厨具</b><i className="yo-ico">&#xf0343;</i></a></li>
 				<li><a href=""><b>餐具</b><i className="yo-ico">&#xf0343;</i></a></li>
 				<li><a href=""><b>茶具餐饮</b><i className="yo-ico">&#xf0343;</i></a></li>
