@@ -78,9 +78,6 @@ class Index extends React.Component {
 				
 			</ul>
 		</footer>
-		<Link to="/kindindex"  ref="kindindex" onClick={this.clickHandler.bind(this,"kindindex")} title="kinindex" activeClassName="active">
-						
-		</Link>
 	  </div>
     )
   }
