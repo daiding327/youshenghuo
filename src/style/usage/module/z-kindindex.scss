@@ -1,16 +1,20 @@
 
 	.m-kindindex{
+
 		margin-top:44px;	
 		height:100%;
 		width:100%;	
+		padding-top: 44px;
 		#ul{
 		position: fixed;
+		z-index: 999;
 		top:44px;
 		left:0px;	
 		height:45px;
 		width:100%;
 		@include flexbox();
 		@include flex-direction();	
+
 			li{
 				@include flex();
 				text-align: center;
@@ -49,6 +53,7 @@
 					top:10px;
 			}	
 		}
+		
 			
 	}
 

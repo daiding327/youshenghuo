@@ -1,5 +1,7 @@
-import React from 'react';
+import React from 'react'
 import Carousel from '../../component_dev/carousel/src'
+import Scroller from '../../component_dev/scroller/src'
+import List from '../../component_dev/list/src'
 import {Link} from 'react-router'
 
 class Home extends React.Component {
@@ -18,28 +20,50 @@ class Home extends React.Component {
   render() {
 	return (
 		<div className="m-home">
-			<div className="swiper">
-				<Carousel delay={3} dots={false}>
-					{this.state.list} 
-				</Carousel>
-				
-			</div>
-			<div className="u-categery">
-				{this.state.categery}
-			</div>
-			<Link to="/supermarket" className="supermarket">
-				<img src="./images/more.jpg"/>
-			</Link>
-			<div className="baihuo">
-				<img className="bu-top" src="images/1488980649202.jpg"/>
-				{this.state.baihuo1}
-				<img className="bu-bottom" src="images/1488980695836.jpg"/>
-				{this.state.baihuo2}
-			</div>
-			<div className="tuijian">热门推荐</div>
-			<div className="tuijian-item">
-				{this.state.tuijian}
-			</div>
+			<Scroller
+				scrollY={true}
+				extraClass ='yo-scroller yo-scroller-fullscreen'
+				ref="scroller"
+				usePullRefresh={true}
+				onRefresh={() => {
+					// 刷新数据 start
+					// ...
+					// 刷新数据 end
+
+					this.refs.scroller.stopRefreshing(true); // 这个调用也可以放在异步操作的回调里之后
+				}}
+				useLoadMore={true}
+				onLoad={() => {
+					// 加载数据 start
+					// ...
+					// 加载数据 end
+
+					this.refs.scroller.stopLoading(true); // 这个调用也可以放在异步操作的回调里之后
+				}}
+			>
+				<div className="swiper">
+					<Carousel delay={3} dots={false}>
+						{this.state.list} 
+					</Carousel>
+					
+				</div>
+				<div className="u-categery">
+					{this.state.categery}
+				</div>
+				<Link to="/supermarket" className="supermarket">
+					<img src="./images/more.jpg"/>
+				</Link>
+				<div className="baihuo">
+					<img className="bu-top" src="images/1488980649202.jpg"/>
+					{this.state.baihuo1}
+					<img className="bu-bottom" src="images/1488980695836.jpg"/>
+					{this.state.baihuo2}
+				</div>
+				<div className="tuijian">热门推荐</div>
+				<div className="tuijian-item">
+					{this.state.tuijian}
+				</div>
+			</Scroller>
 		</div>
 	)	
   }
@@ -73,7 +97,7 @@ class Home extends React.Component {
 			console.log(res.supermarket1);
 			var arr3=[];
 			for(var k in res.supermarket1){
-				arr3.push(<Link to="" className="top"><img className="img" src={res.supermarket1[k]} /></Link>)
+				arr3.push(<Link to="/supermarket" className="top"><img className="img" src={res.supermarket1[k]} /></Link>)
 			}
 			this.setState({
 				baihuo1:arr3
@@ -85,7 +109,7 @@ class Home extends React.Component {
 			console.log(res.supermarket2);
 			var arr4=[];
 			for(var k in res.supermarket2){
-				arr4.push(<Link to="" className="bottom"><img className="img" src={res.supermarket2[k]} /></Link>)
+				arr4.push(<Link to="/supermarket" className="bottom"><img className="img" src={res.supermarket2[k]} /></Link>)
 			}
 			this.setState({
 				baihuo2:arr4

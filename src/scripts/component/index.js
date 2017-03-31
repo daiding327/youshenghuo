@@ -1,6 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router'
 
+
+
 class Index extends React.Component {
   constructor (props) {
     super(props)
@@ -16,14 +18,12 @@ class Index extends React.Component {
   }
   clickHandler1(type){
 	  this.setState({
-		  title:this.refs[type].props.title,
 		  flag:false
 	  })
   }
   
   clickHandler2(type){
 	  this.setState({
-		  title:this.refs[type].props.title,
 		  flag:true
 	  })
   }
@@ -48,7 +48,6 @@ class Index extends React.Component {
 		
 		<section style={{overflowY:this.state.flag==false ? 'hidden' : 'auto'}}>
 			{this.props.children}
-
 		</section>
 		<footer>
 			<ul>
@@ -59,19 +58,19 @@ class Index extends React.Component {
 					</Link>
 				</li>
 				<li>
-					<Link to="/kind"  ref="kind" onClick={this.clickHandler1.bind(this,"kind")} title="分类" activeClassName="active">
+					<Link to="/kind"  ref="kind" onClick={this.clickHandler1.bind(this,"kind")}  activeClassName="active">
 						<i className="yo-ico">&#xe6bb;</i>
 						<b>分类</b>
 					</Link>
 				</li>
 				<li>
-					<Link to="/cart"  ref="cart" onClick={this.clickHandler.bind(this,"cart")} title="购物车" activeClassName="active">
+					<Link to="/cart" activeClassName="active">
 						<i className="yo-ico">&#xe601;</i>
 						<b>购物车</b>
 					</Link>
 				</li>
 				<li>
-					<Link to="/my"  ref="my" onClick={this.clickHandler.bind(this,"my")} title="我的" activeClassName="active">
+					<Link to="/my"  activeClassName="active">
 						<i className="yo-ico">&#xe629;</i>
 						<b>我的</b>
 					</Link>
@@ -85,19 +84,19 @@ class Index extends React.Component {
   }
 
   componentDidMount() {
-    //fetch('/api/list.php')
-    //.then(response=>response.json())
-    // function(response) {
-    //   return response.json()
-    // }
-    //.then(res=>{
-      // console.log(res);
-     // this.setState({
-      //  name: <div>{res.name}</div>
-    //  })
-    //})
+    
   }
   
 }
 
+
 export default Index
+
+
+
+
+
+
+
+
+

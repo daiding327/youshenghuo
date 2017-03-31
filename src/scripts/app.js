@@ -1,5 +1,6 @@
 require('../style/app.scss')
-
+import {Provider} from 'react-redux'
+import {store} from './redux/store'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Router,Route,IndexRoute,IndexRedirect,hashHistory} from 'react-router'
@@ -52,13 +53,11 @@ ReactDOM.render(
 				<Route path="jiage" component={Jiage}></Route>
 				<Route path="random" component={Random}></Route>
 			</Route>
-
-			
-
 		</Route>
 		<Route path="lunone" component={Lunone}></Route>
 		<Route path="jiadian" component={Jiadian}></Route>
 		<Route path="supermarket" component={Supermarket}></Route>
 	</Router>,
+	
 	document.getElementById('root')
 )

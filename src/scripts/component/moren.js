@@ -1,5 +1,6 @@
 import React from 'react';
-
+import Scroller from '../../component_dev/scroller/src'
+import List from '../../component_dev/list/src'
 class Moren extends React.Component {
   constructor (props) {
     super(props)
@@ -11,8 +12,29 @@ class Moren extends React.Component {
   render() {
 	return (
 		<div className="box">
+			<Scroller
+					scrollY={true}
+					className="flex"
+					ref="scroller"
+					usePullRefresh={true}
+					onRefresh={() => {
+						// 刷新数据 start
+						// ...
+						// 刷新数据 end
+
+						this.refs.scroller.stopRefreshing(true); // 这个调用也可以放在异步操作的回调里之后
+					}}
+					useLoadMore={true}
+					onLoad={() => {
+						// 加载数据 start
+						// ...
+						// 加载数据 end
+
+						this.refs.scroller.stopLoading(true); // 这个调用也可以放在异步操作的回调里之后
+					}}
+				>
 			{this.state.list} 
-			
+			</Scroller>
 		</div>
 	)	
   }
