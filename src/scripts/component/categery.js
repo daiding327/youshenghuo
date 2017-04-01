@@ -84,7 +84,7 @@ class Categery extends React.Component {
 		.then(res=>{
 			var arr1=[];
 			for(var k in res.xinbangyang){
-				arr1.push(<Link to="" className="bottom">
+				arr1.push(<Link to="/xiang" className="bottom">
 							<img className="img" src={res.xinbangyang[k].img} />
 							<p>{res.xinbangyang[k].title}</p>
 							<span>{res.xinbangyang[k].price}</span>

@@ -82,7 +82,7 @@ class Supermarket extends React.Component {
 		.then(res=>{
 			var arr1=[];
 			for(var k in res.supermarket3){
-				arr1.push(<Link to="" className="bottom">
+				arr1.push(<Link to="/xiang" className="bottom">
 							<img className="img" src={res.supermarket3[k].img} />
 							<p>{res.supermarket3[k].title}</p>
 							<span>{res.supermarket3[k].price}</span>
