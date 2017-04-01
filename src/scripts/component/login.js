@@ -35,7 +35,7 @@ class Login extends React.Component {
 						alert("用户名密码不符!");
 					} else if (response) {
 						userID = response.userID;
-						console.log(typeof userID)
+						//console.log(typeof userID)
 						localStorage.setItem("userID", userID);
 						window.location.href = "/#/home"
 							// window.location.href = "http://localhost:9000/#/my?userID" + userID

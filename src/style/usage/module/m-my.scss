@@ -1,6 +1,7 @@
 
 
 .m-my{
+position:relative;
     padding-top:0.44rem;
      background:#f7f7f7;
 	height:100%;
@@ -44,9 +45,7 @@
 .c{width:2rem;height:0.3rem;background:#ff4857;border:none;border-radius:0.1rem;margin-left:0.5rem;color:#fff;margin-top:0.2rem;display:inline-block;text-align:center;}
 
     header{
-    position:fixed;
-    top:0;
-    left:0;
+   
     height:0.44rem;
     background:rgba(0,0,0,0.3);
     line-height:0.44rem;
@@ -89,7 +88,9 @@
 
 
    footer{
-   margin-top:1.25rem;
+  position:absolute;
+ top:1.25rem;
+  left:0;
     height:0.51rem;
     background:#fff;
     @include border(1px 0 0 0,gray);
