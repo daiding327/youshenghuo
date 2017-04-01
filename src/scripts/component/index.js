@@ -12,7 +12,7 @@ class Index extends React.Component {
   render() {
     return (
       <div className="m-index">
-		<header style={{background:this.props.bgcolor}}>
+		<header style={{background:this.props.value}}>
 			<div className="u-header">
 				<Link to="/kind">
 					<i  className="yo-ico">&#xe60b;</i>
@@ -64,6 +64,13 @@ class Index extends React.Component {
     )
   }
 
+  componentDidUpdate() {
+    let bgcolor = this.props.routes[1].bgcolor
+    this.props.onChange({
+      type: 'changecolor',
+      bgcolor: bgcolor
+    })
+  }
   componentDidMount() {
     let bgcolor = this.props.routes[1].bgcolor
     this.props.onChange({

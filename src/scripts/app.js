@@ -34,7 +34,7 @@ ReactDOM.render(
 <Provider store={store}>
 		<Router history={hashHistory}>
 			<Route path="/" component={Index}>
-				<IndexRedirect to="/home"  bgcolor="rgba(0,0,0,0.3)"></IndexRedirect>
+				<IndexRedirect to="/home"></IndexRedirect>
 				<Route path="home"  bgcolor="rgba(0,0,0,0.3)" component={Home}></Route>
 				<Route path="kind" bgcolor="rgba(255,92,80,1)" component={Kind}>
 					<IndexRedirect to="one"></IndexRedirect>
@@ -45,8 +45,8 @@ ReactDOM.render(
 					<Route path="five" component={Five}></Route>
 					<Route path="six" component={Six}></Route>
 				</Route>
-				<Route path="cart" component={Cart}></Route>
-				<Route path="kindindex" component={Kindindex}>
+				<Route path="cart" bgcolor="rgba(0,0,0,0.3)" component={Cart}></Route>
+				<Route path="kindindex" bgcolor="rgba(0,0,0,0.3)" component={Kindindex}>
 					<IndexRedirect to="moren"></IndexRedirect>
 					<Route path="moren" component={Moren}></Route>
 					<Route path="sales" component={Sales}></Route>
@@ -54,13 +54,8 @@ ReactDOM.render(
 					<Route path="random" component={Random}></Route>
 				</Route>
 			</Route>
-			<Route path="cart" component={Cart}></Route>
 			<Route path="my" component={My}></Route>
-
-
-			  <Route path="login" component={Login}> 
-			</Route>    
-
+			<Route path="login" component={Login}></Route>    
 			<Route path="/lunone" component={Lunone}></Route>
 			<Route path="jiadian" component={Jiadian}></Route>
 			<Route path="supermarket" component={Supermarket}></Route>

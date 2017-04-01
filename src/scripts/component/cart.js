@@ -9,7 +9,7 @@ class Cart extends React.Component {
 	this.state={
 		flag:false,
 		list:[<div/>],
-		value:1
+		value:0
 	}
   }
   reduce () {
@@ -38,13 +38,21 @@ class Cart extends React.Component {
 		  fetch(url)
 		  .then(response=>response.json())
 			.then(res=>{
-				console.log(res.cart);
 				this.setState({
 				  flag:true,
 				  list:res.cart
 			  })
 			})
-		  
+		  var count=localStorage.count
+		  if(count){
+			  this.setState({
+				  value:count
+			  })
+		  }else{
+			  this.setState({
+				  value:0
+			  })
+		  }
 	  }else{
 		  this.setState({
 			  flag:false

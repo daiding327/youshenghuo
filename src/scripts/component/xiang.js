@@ -38,12 +38,19 @@ class Xiang extends React.Component {
   }
   jia () {
 	   var userID=localStorage.userID;
+	   var count=localStorage.count;
 	   if(userID){
 		   var url="http://datainfo.duapp.com/shopdata/updatecar.php?userID=userID&goodsID=12&number=1";
 		  fetch(url)
 		  .then(response=>response.json())
 			.then(res=>{
-				console.log(res);
+				if(count){
+					count++;
+					localStorage.setItem("count",count)
+				}else{
+					localStorage.setItem("count","1")
+				}
+				
 				this.setState({
 					xianshi:"加入购物车成功",
 					show:!this.state.show
@@ -54,7 +61,6 @@ class Xiang extends React.Component {
 				xianshi:"请先登录哦",
 				show:!this.state.show
 			})
-		  // window.location.href="#/my"
 		   
 	   }
 	  

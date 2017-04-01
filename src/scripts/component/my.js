@@ -149,21 +149,24 @@ class My extends React.Component {
 				   </div>
 
                 
-                 <div className="box-register-box" style={{display:this.state.appear==false?'block':'none'}}>
-			
-				<div className="register-txt box-register"><span className="a">用户名:</span><input type="text" className="boxa" ref="userID" placeholder="手机号码"/></div>
-
-
-				<div className="pwd box-register"><span className="b">密码：</span><input type="password" className="boxb" ref="password" placeholder="密码"/></div>
-				<div className="box-register btn-register"><input className="register-register" type="button" value="注册" onClick={this.register}/></div>
-
+                <div className="box-register-box" style={{display:this.state.appear==false?'block':'none'}}>
+					<div className="register-txt box-register">
+						<span className="a">用户名：</span>
+						<input type="text" className="boxa" ref="userID" placeholder="手机号码"/>
+					</div>
+					<div className="pwd box-register">
+						<span className="b">密&nbsp;&nbsp;&nbsp;码：</span>
+						<input type="password" className="boxb" ref="password" placeholder="密码"/>
+					</div>
+					<div className="box-register btn-register">
+						<input className="register-register" type="button" value="注册" onClick={this.register}/>
+					</div>
+					<div className="input"  style={{display:this.state.appear==false?'block':'none'}}>
+						<Link to="/login" className="login"><span className="c">登录</span></Link>
+					</div>
 			    </div>
             
-				            <div className="input"  style={{display:this.state.appear==false?'block':'none'}}>
-		        				<Link to="/login" className="login"><span className="c">登录</span></Link>
-		        				
-		        
-		                    </div>
+				
   			
               <div className="shang" style={{display:this.state.appear==false?'none':'block'}}>欢迎您！{this.state.userID}</div>
 			  <div className="quit" onClick={this.disappear} style={{display:this.state.appear==false?'none':'block'}}>退出登录</div>

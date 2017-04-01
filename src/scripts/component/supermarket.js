@@ -80,7 +80,6 @@ class Supermarket extends React.Component {
     fetch("./data/data.json")
 		.then(response=>response.json())
 		.then(res=>{
-			console.log(res.supermarket3);
 			var arr1=[];
 			for(var k in res.supermarket3){
 				arr1.push(<Link to="" className="bottom">
@@ -96,7 +95,6 @@ class Supermarket extends React.Component {
 	fetch("./data/data.json")
 		.then(response=>response.json())
 		.then(res=>{
-			console.log(res.superhappycall);
 			var arr2=[];
 			for(var k in res.superhappycall){
 				arr2.push(<li className="happy">

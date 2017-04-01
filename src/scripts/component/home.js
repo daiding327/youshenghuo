@@ -1,7 +1,7 @@
 import React from 'react'
 import Carousel from '../../component_dev/carousel/src'
-import Scroller from '../../component_dev/scroller/src'
-import List from '../../component_dev/list/src'
+import List from '../../component_dev/scroller/src'
+
 import {Link} from 'react-router'
 
 class Home extends React.Component {
@@ -20,7 +20,7 @@ class Home extends React.Component {
   render() {
 	return (
 		<div className="m-home">
-			<Scroller
+			<List
 				scrollY={true}
 				extraClass ='yo-scroller yo-scroller-fullscreen'
 				ref="scroller"
@@ -63,7 +63,7 @@ class Home extends React.Component {
 				<div className="tuijian-item">
 					{this.state.tuijian}
 				</div>
-			</Scroller>
+			</List>
 		</div>
 	)	
   }
@@ -82,7 +82,6 @@ class Home extends React.Component {
 		fetch("./data/data.json")
 		.then(response=>response.json())
 		.then(res=>{
-			console.log(res.kind);
 			var arr2=[];
 			for(var k in res.kind){
 				arr2.push(<Link to="/jiadian"><img className="img" src={res.kind[k]} /></Link>)
@@ -94,10 +93,9 @@ class Home extends React.Component {
 		fetch("./data/data.json")
 		.then(response=>response.json())
 		.then(res=>{
-			console.log(res.supermarket1);
 			var arr3=[];
 			for(var k in res.supermarket1){
-				arr3.push(<Link to="/supermarket" className="top"><img className="img" src={res.supermarket1[k]} /></Link>)
+				arr3.push(<Link to="/supermarket" className="top"><List.LazyImage className="img" src={res.supermarket1[k]} /></Link>)
 			}
 			this.setState({
 				baihuo1:arr3
@@ -106,10 +104,9 @@ class Home extends React.Component {
 		fetch("./data/data.json")
 		.then(response=>response.json())
 		.then(res=>{
-			console.log(res.supermarket2);
 			var arr4=[];
 			for(var k in res.supermarket2){
-				arr4.push(<Link to="/supermarket" className="bottom"><img className="img" src={res.supermarket2[k]} /></Link>)
+				arr4.push(<Link to="/supermarket" className="bottom"><List.LazyImage className="img" src={res.supermarket2[k]} /></Link>)
 			}
 			this.setState({
 				baihuo2:arr4
@@ -118,11 +115,10 @@ class Home extends React.Component {
 		fetch("./data/data.json")
 		.then(response=>response.json())
 		.then(res=>{
-			console.log(res.tuijian);
 			var arr5=[];
 			for(var k in res.tuijian){
 				arr5.push(<Link to="/xiang" className="bottom">
-							<img className="img" src={res.tuijian[k].img} />
+							<List.LazyImage className="img" src={res.tuijian[k].img} />
 							<p>{res.tuijian[k].title}</p>
 							<span>{res.tuijian[k].price}</span>
 						  </Link>)

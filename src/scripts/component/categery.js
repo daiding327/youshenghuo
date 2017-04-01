@@ -82,7 +82,6 @@ class Categery extends React.Component {
     fetch("./data/data.json")
 		.then(response=>response.json())
 		.then(res=>{
-			console.log(res.xinbangyang);
 			var arr1=[];
 			for(var k in res.xinbangyang){
 				arr1.push(<Link to="" className="bottom">
@@ -98,7 +97,6 @@ class Categery extends React.Component {
 	fetch("./data/data.json")
 		.then(response=>response.json())
 		.then(res=>{
-			console.log(res.happycall);
 			var arr2=[];
 			for(var k in res.happycall){
 				arr2.push(<li className="happy">
